@@ -3,7 +3,6 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home4/maidenwa/public_html/
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
     - /bin/cp -R vendor $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp about-us.html $DEPLOYPATH
