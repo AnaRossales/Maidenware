@@ -6,3 +6,13 @@ deployment:
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp -R vendor $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp about-us.html $DEPLOYPATH
+    - /bin/cp blog-details.html $DEPLOYPATH
+    - /bin/cp products.html $DEPLOYPATH
+    - /bin/cp product-details.html $DEPLOYPATH
+    - /bin/cp checkout.html $DEPLOYPATH
+    - /bin/cp contact.html $DEPLOYPATH
+    - /bin/cp licese.txt $DEPLOYPATH
+    - /bin/cp special-offer.html $DEPLOYPATH
+    - /bin/cp terms.html $DEPLOYPATH
+    - /bin/cp testimonials.html $DEPLOYPATH
