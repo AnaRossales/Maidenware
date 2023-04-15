@@ -258,6 +258,12 @@ header .navbar {
 	transition: all 0.5s;
 	margin-top: 5px;
 }
+
+.navbar-brand img {
+	width:135px;
+	background: transparent;
+} 
+
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .active>.nav-link,
 .navbar .navbar-nav .nav-link.active,
@@ -299,7 +305,7 @@ header .navbar {
 
 .banner-item-01 {
 	padding: 300px 0px;
-	background-image: url(../images/slider-image-1-1920x600.jpg);
+	background-image: url(https://maidenware1.s3.us-east-2.amazonaws.com/imagenes-sitio-web/1.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -307,7 +313,7 @@ header .navbar {
 
 .banner-item-02 {
 	padding: 300px 0px;
-	background-image: url(../images/slider-image-2-1920x600.jpg);
+	background-image: url(https://maidenware1.s3.us-east-2.amazonaws.com/imagenes-sitio-web/2.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -315,7 +321,7 @@ header .navbar {
 
 .banner-item-03 {
 	padding: 300px 0px;
-	background-image: url(../images/slider-image-3-1920x600.jpg);
+	background-image: url(https://maidenware1.s3.us-east-2.amazonaws.com/imagenes-sitio-web/3.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -323,6 +329,10 @@ header .navbar {
 
 .banner .banner-item {
 	max-height: 600px;
+}
+
+.oscuro{
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .banner .text-content {
