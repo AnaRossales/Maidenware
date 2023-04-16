@@ -19,10 +19,10 @@
 <html>
     <body>
     <form action="/procesar-pago" method="POST">
-                      <script
-                        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                        data-preference-id="<?php echo $preference->id; ?>">
-                      </script>
-                      </form>
-                    </body>
-                    </html>
+        <script
+        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+        data-preference-id="<?php echo $preference->id; ?>">
+        </script>
+    </form>
+    </body>
+</html>
