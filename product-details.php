@@ -1,3 +1,21 @@
+<?php
+
+    include_once "vendor/autoload.php";
+    $token="TEST-3614927209770692-041418-05738a329f43b4a87d51027d707cdbe9-1352924688";
+    MercadoPago\SDK::setAccessToken($token);
+
+    $preference = new MercadoPago\Preference();
+    
+        
+    // Crea un ítem en la preferencia
+    $item = new MercadoPago\Item();
+    $item->title = 'Tarjeta';
+    $item->quantity = 1;
+    $item->unit_price = 900;
+    $preference->items = array($item);
+    $preference->save();
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +29,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Online Store Website Template</title>
-    <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <script src="https://www.mercadopago.com/v2/security.js" view="checkout"></script>
+    <title></title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,7 +42,7 @@
 
   <body>
 
-    <!-- ***** Preloader Start ***** -->
+    <!-- ***** Preloader Start 
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -34,7 +50,7 @@
             <div></div>
         </div>
     </div>  
-    <!-- ***** Preloader End ***** -->
+    Preloader End ***** -->
 
     <!-- Header -->
     <header class="">
@@ -159,16 +175,12 @@
 
                     <div class="col-sm-6">
                       <div id="wallet_container">
-                        <script>
-                          const mp = new MercadoPago('TEST-2b0305b0-5a0f-45e2-979b-b4455d3a6709', {locale: 'es-MX'}); // Inicializa el objeto de Mercado Pago con tu clave pública
-                          const bricksBuilder = mp.bricks();
-                          mp.bricks().create("wallet", "wallet_container", {
-                        initialization: {
-                         preferenceId: "<? echo $preference_id; ?>",
-                         redirectMode: "blank"
-                      },
-                      });
+                      <form action="/procesar-pago" method="POST">
+                      <script
+                        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+                        data-preference-id="<?php echo $preference->id; ?>">
                       </script>
+                      </form>
                       </div>
                       
                     </div>
