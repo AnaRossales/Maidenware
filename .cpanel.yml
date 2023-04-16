@@ -16,4 +16,4 @@ deployment:
     - /bin/cp terms.html $DEPLOYPATH
     - /bin/cp testimonials.html $DEPLOYPATH
     - /bin/cp product-details.php $DEPLOYPATH
-    - /bin/cp product-detail-prueba.php
+    - /bin/cp product-detail-prueba.php $DEPLOYPATH
