@@ -8871,7 +8871,7 @@
  }
  
  .bg-secondary {
-   background: #917AEB !important;
+   background: #FA9E9E !important;
  }
  
  .bg-secondary-light {
@@ -9432,7 +9432,7 @@
    line-height: 70px;
    border-radius: 8px;
    color: #B55151;
-   background-color: rgba(81, 181, 109, 0.2);
+   background-color:#FA9E9E;
  }
  .service-item .service-title {
    transition: color 0.3s;
@@ -9472,9 +9472,15 @@
    }
  }
  .service-item:nth-child(even) .colored-box {
-   color: #917AEB;
-   background-color: rgba(145, 122, 235, 0.2);
+   color: #F17C7C;
+   background-color: #FA9E9E;
  }
+
+ .colored-box {
+  color: #F17C7C;
+  background-color: #FA9E9E;
+}
+
  .service-item:hover {
    border-color: transparent;
  }
@@ -9508,8 +9514,8 @@
    line-height: 85px;
    text-align: center;
    border-radius: 8px;
-   color: #917AEB;
-   background-color: rgba(145, 122, 235, 0.1);
+   color: #D45858;
+   background-color:#FA9E9E;
  }
  .difference-of-us-item:nth-child(even) .icon {
    color: #B55151;
