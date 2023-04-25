@@ -5,6 +5,8 @@ deployment:
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp -R vendor $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R plugins $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
     - /bin/cp about-us.html $DEPLOYPATH
     - /bin/cp blog-details.html $DEPLOYPATH
     - /bin/cp products.html $DEPLOYPATH
