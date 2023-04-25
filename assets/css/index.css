@@ -8763,7 +8763,7 @@
    color: #fff;
  }
  .btn-outline-primary.w-100:hover, .btn-outline-primary.d-block:hover, .btn-outline-primary.d-flex:hover, .btn-outline-primary.effect-none:hover {
-   background: #e0f2e5;
+   background: #FA9E9E;
  }
  
  .nav-pills .nav-link:hover {
@@ -8953,7 +8953,7 @@
    border-bottom: 1px dotted #B55151;
  }
  .content a:hover {
-   color: #B55151;
+   color: #ffff;
    border-bottom: 1px solid #B55151;
  }
  .content ol,
@@ -9472,7 +9472,7 @@
    }
  }
  .service-item:nth-child(even) .colored-box {
-   color: #F17C7C;
+   color: #FFFF;
    background-color: #FA9E9E;
  }
 
@@ -9519,7 +9519,7 @@
  }
  .difference-of-us-item:nth-child(even) .icon {
    color: #B55151;
-   background-color: rgba(81, 181, 109, 0.1);
+   background-color: rgba(255, 150, 156, 0.18);
  }
  
  .has-shapes {
