@@ -1,0 +1,30 @@
+  __  __       _     _                                  
+ |  \/  |     (_)   | |                                 
+ | \  / | __ _ _  __| | ___ _ ____      ____ _ _ __ ___ 
+ | |\/| |/ _` | |/ _` |/ _ \ '_ \ \ /\ / / _` | '__/ _ \
+ | |  | | (_| | | (_| |  __/ | | \ V  V / (_| | | |  __/
+ |_|  |_|\__,_|_|\__,_|\___|_| |_|\_/\_/ \__,_|_|  \___|
+
+Saludos, pequeño archivo para recordar que hace cada archivo
+
+Sistema: Plantilla Para No Usuarios (Carpeta PruebaNoUsuarios)
+
+Descripción: En este pequeño sistema, esta el programa con el cual el usuario pudiera ver como funciona el sistema de las plantilla sin comprarlo
+
+Archivos con su descripcion: 
+
+	Formulario: En este es donde el usuario mete la información que requiera, si bien el boton aun no queda (21/04/23), puede realizar la función sin problemas
+	 	    este tiene un script que permite validar la información en la parte superior, y en la parte inferior hay otro script que permite validar cual 
+		    plantilla escogio el usuario.
+
+	queplantillaseleccione: Este es producto de la anterior, en caso que el usuario el usuario entre directamente, lo redirecciona a la parte del formulario
+				en esta en base a la plantilla que seleccione, tendra 3 opciones, las cuales en base a la que se le seleccione, tendra un caso especifico 
+				en este caso la plantilla
+	traimelasvariablesuwu: en esta simplementa funciona de la para no inscribir todas las variables 3 veces, esta presente en el archivo, que plantillaseleccione
+
+Sin más por agregar, creo que es todo por ahora, dudas, preguntas, comentarios, sugerencias, aclaraciones, felicitaciones o reclamos contactar con Alan Obregon
+
+21/04/23
+
+
+-Query36
