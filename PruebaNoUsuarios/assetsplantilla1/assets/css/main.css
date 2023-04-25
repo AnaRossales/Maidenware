@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	background-image: url("https://maidenware1.s3.us-east-2.amazonaws.com/fondoplantilla1.jpg");
 }
 
 ol, ul {
@@ -1124,6 +1125,7 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
+			background-image: url("https://maidenware1.s3.us-east-2.amazonaws.com/fondoplantilla1.jpg");
 		}
 
 		#bg:before {

@@ -14,7 +14,7 @@ if($plantillaselecionada==""){
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assetsplantilla1/assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assetsplantilla1/assets/css/noscript.css" /></noscript>
-	</head><body class="is-preload" style="background-image: url("bg.jpg")">';
+	</head><body class="is-preload">';
 	include 'incluyemelasvariablesuwu.php';
 		include 'plantilla1.php';
 	}

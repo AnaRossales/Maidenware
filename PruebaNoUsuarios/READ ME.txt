@@ -26,5 +26,7 @@ Sin más por agregar, creo que es todo por ahora, dudas, preguntas, comentarios,
 
 21/04/23
 
-
 -Query36
+
+
+Pendiente, fondo de pantalla de la plantilla 1 no funciona, checar //
