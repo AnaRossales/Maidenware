@@ -11,19 +11,14 @@
     $item = new MercadoPago\Item();
     $item->title = 'Tarjeta';
     $item->quantity = 1;
-    $item->unit_price = 30;
+    $item->unit_price = 900;
     $preference->items = array($item);
     $preference->save();
-    $preference->back_urls=array(
-      "success"=>"http://localhost/maidenware/pago-completo.php",
-      "failure"=>"https://",
-      "pending"=>"https://"
-    );
     ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="assets/css/index.css">
+
   <head>
 
     <meta charset="utf-8">
@@ -58,51 +53,42 @@
     Preloader End ***** -->
 
     <!-- Header -->
-    <header class="navigation bg-tertiary">
-	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.png" alt="Wallet">
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-					<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
-					</li>
-					<li class="nav-item "> <a class="nav-link" href="about.html">About</a>
-					</li>
-					<li class="nav-item "> <a class="nav-link" href="how-it-works.html">How It Works</a>
-					</li>
-					<li class="nav-item "> <a class="nav-link" href="services.html">Services</a>
-					</li>
-					<li class="nav-item "> <a class="nav-link" href="contact.html">Contact</a>
-					</li>
-					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item " href="blog.html">Blog</a>
-							</li>
-							<li><a class="dropdown-item " href="blog-details.html">Blog Details</a>
-							</li>
-							<li><a class="dropdown-item " href="service-details.html">Service Details</a>
-							</li>
-							<li><a class="dropdown-item " href="faq.html">FAQ&#39;s</a>
-							</li>
-							<li><a class="dropdown-item " href="legal.html">Legal</a>
-							</li>
-							<li><a class="dropdown-item " href="terms.html">Terms &amp; Condition</a>
-							</li>
-							<li><a class="dropdown-item " href="privacy-policy.html">Privacy &amp; Policy</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<!-- account btn  <a href="#!" class="btn btn-outline-primary">Log In</a>-->
-				<!-- account btn  <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a>-->
-			</div>
-		</div>
-	</nav>
-</header>
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>Online Store <em>Website</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                <li class="nav-item active"><a class="nav-link" href="products.html">Products</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                    
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="about-us.html">About Us</a>
+                      <a class="dropdown-item" href="blog.html">Blog</a>
+                      <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                      <a class="dropdown-item" href="terms.html">Terms</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Page Content -->
     <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
@@ -209,15 +195,6 @@
         data-preference-id="<?php echo $preference->id; ?>">
         </script>
     </form>
-    <style> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } .btcpay-form option { color: #000; background: rgba(0,0,0,.1); } .btcpay-input-price { -moz-appearance: textfield; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; }.btcpay-input-price::-webkit-outer-spin-button, .btcpay-input-price::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } </style>
-<form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
-  <input type="hidden" name="storeId" value="CJgq39kg6FH14gk3UVmxx9Bk5wmjTh8fDDxpXAgzw5J8" />
-  <input type="hidden" name="checkoutDesc" value="Identidad Virtual" />
-  <input type="hidden" name="browserRedirect" value="https://moodle.org/mod/forum/discuss.php?d=337481" />
-  <input type="hidden" name="price" value="0.00102" />
-  <input type="hidden" name="currency" value="BTC" />
-  <input type="image" class="submit" name="submit" src="https://maidenware1.s3.us-east-2.amazonaws.com/Bitcoin.png" style="width:209px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
-</form>
                     </div>
                       </div>
                       
