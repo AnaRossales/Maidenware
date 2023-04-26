@@ -47,7 +47,7 @@ echo '
 					<footer id="footer">
 						<p class="copyright">&copy; Maidenware. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						<br><br>
-						<p><input type="Submit" value="Guardar"></p>
+						<p><input type="Submit" value="Guardar"></p></form>
 					</footer>
 
 			</div>
@@ -61,4 +61,3 @@ echo '
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>';
-?>

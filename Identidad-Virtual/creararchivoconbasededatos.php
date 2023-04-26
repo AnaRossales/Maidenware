@@ -34,6 +34,7 @@ if (file_exists($nombre_archivo. '.php')) {
     $contenido = $contenido . " mysqli_close();
 	?>";
 	file_put_contents($nombre_archivo . '.php', $contenido);
+    echo '<br>'.$id.'<br>'.$nombre.'<br>'.$correo.'<br>'.$profesion.'<br>'.$NumeroWhats.'<br>'.$Instagram.'<br>'.$github.'<br>'.$Linkedin.'<br>'.$twitter.'<br>'.$Youtube.'<br>'.$Discord.'<br>'.$Facebook;
 	echo "El archivo " . $nombre_archivo . ".php ha sido creado correctamente.";
 }
 ?>
