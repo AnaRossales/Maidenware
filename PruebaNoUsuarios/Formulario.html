@@ -11,7 +11,6 @@
 </head>
 <body>
     <script>
-
         //Esta funcion sirve para comprobar que lo que el usuario inserto en los espacios de Facebook y Discord realmente sean links 
         function validarLink(input) {
           // Expresión regular para validar enlaces
@@ -22,7 +21,6 @@
             input.value = "";
           }
         }
-
 //Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
        
 function validarEspacios(event) {
@@ -77,7 +75,9 @@ function validarEspacios(event) {
                 <li id="cid_89" class="form-input-wide" data-type="control_head">
                     <div class="form-header-group  header-default">
                         <div class="header-text httal htvam">
-                            <h1 id="header_89" class="form-header" data-component="header">Identidad Virtual</h1>
+                            <h1 id="header_89" class="form-header" data-component="header" style="text-align: center;">Identidad Virtual</h1>
+                            <br><br>
+                            <p>Completa este formulario con tus datos personales y enlaces a tus redes sociales para crear tu <b>Identidad Virtual</b>. Asegúrate de llenar cuidadosamente todos los campos para que otros puedan encontrarte en línea</p>
                         </div>
                     </div>
                 </li>
@@ -86,9 +86,9 @@ function validarEspacios(event) {
                 <li id="cid_101" class="form-input-wide" data-type="control_head">
                     <div class="form-header-group  header-small">
                         <div class="header-text httal htvam">
-                            <h3 id="header_101" class="form-header" data-component="header">Información Personal</h3>
+                            <h2 id="header_101" class="form-header" data-component="header">Información Personal</h2>
                         </div>
-                        <p>La siguiente información sera la información principal la cual los usuarios veran de usted, la parte fundamental de la tarjeta de presentación.</p>
+                        <p>La siguiente información es la más importante y aparecerá en su tarjeta de presentación, por lo que es fundamental que la verifique y la llene cuidadosamente.</p>
                     </div>
                 </li>
                 <!--Datos Personales-->
@@ -97,20 +97,32 @@ function validarEspacios(event) {
                         <div data-wrapper-react="true">
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                 <!--Label e input nombre-->
-                                <label id="Nombre" for="Nombre"> Nombre <b style="color: red;">*</b></label><br><br>
-                                <input type="text" id="Nombre" name="Nombre" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu nombre"  required/>
+                                <label id="Nombre" for="Nombre"> Nombre <b style="color: red;">*</b></label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre, el cual aparecera dentro de su tarjeta de presentación</p>
+                                <br>
+                                <input type="text" id="Nombre" name="Nombre" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/>
                             </span>
+                           <!-- <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                                
+                                <label id="id" for="id"> id <b style="color: red;">*</b></label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre, el cual aparecera dentro de su tarjeta de presentación</p>
+                                <br>
+                                <input type="number" id="id" name="id" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu nombre"  required/>
+                            </span>-->
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
 
                                 <!--Label e input correo-->
-                                <label id="Correo" for="Correo"> Correo Electronico <b style="color: red;">*</b> </label><br><br>
-                                <input type="email" id="Correo" name="Correo" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu correo" />
+                                <label id="Correo" for="Correo"> Correo Electrónico <b style="color: red;">*</b> </label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su correo, con el cual las personas que lo vean se podran contactarse con usted</p>
+                                <br>
+                                <input type="email" id="Correo" name="Correo" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su correo" />
                             </span>
 
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                 <!--Label e input profesion-->
-                                <label id="Profesion" for="Profesion"> Profesión <b style="color: red;">*</b> </label><br><br>
-                                <input type="text" id="Profesion" name="Profesion" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu profesion" />
+                                <label id="Profesion" for="Profesion"> Profesión <b style="color: red;">*</b> </label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su profesión, la cual se verá reflejada en su tarjeta de presentación</p><br>
+                                <input type="text" id="Profesion" name="Profesion" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su profesion" />
                             </span>
                         </div>
 
@@ -118,9 +130,9 @@ function validarEspacios(event) {
                         <li id="cid_101" class="form-input-wide" data-type="control_head">
                             <div class="form-header-group  header-small">
                                 <div class="header-text httal htvam">
-                                    <h3 id="header_101" class="form-header" data-component="header">Redes Sociales</h3>
+                                    <h2 id="header_101" class="form-header" data-component="header">Redes Sociales</h2>
                                 </div>
-                                <p>Dentro de este espacio, se encontraran los enlaces con la cual tu usuario final te contactará, <b>exclusivamente llena las de tu agrado y verifica que la información este correcta.</b></p>
+                                <p>Asegúrese de llenar solo los enlaces que desees compartir para que otros puedan contactarle. También verifique que la información esté correcta antes de enviar el formulario.</p>
                             </div>
                         </li>
 
@@ -130,57 +142,66 @@ function validarEspacios(event) {
                                 <div data-wrapper-react="true">
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input Whatsapp-->
-                                        <label id="NmWhatsapp" for="NmWhatsapp">Numero de Whatsapp</label><br><br>
-                                        <input type="tel" id="NmWhatsapp" name="NmWhatsapp" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu NUMERO DE WHATSAPP" pattern="[0-9]{10,12}"/>
+                                        <label id="NmWhatsapp" for="NmWhatsapp">Número de Whatsapp</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su numero de contacto vía Whatsapp</p>
+                                        <br>
+                                        <input type="number" id="NmWhatsapp" name="NmWhatsapp" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su numero de Whatsapp" pattern="[0-9]{10,12}"/>
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input Facebook-->
-                                        <label id="Facebook" for="Facebook">Facebook</label><br><br>
-                                        <input type="text" id="Facebook" name="Facebook" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu LINK DE TU PERFIL" onchange="validarLink(this)" />
+                                        <label id="Facebook" for="Facebook">Facebook</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte el link de su cuenta de Facebook</p><br>
+                                        <input type="text" id="Facebook" name="Facebook" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa el link de su perfil" onchange="validarLink(this)" />
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input Instagram-->
-                                        <label id="Instagram" for="Instagram">Instagram</label><br><br>
-                                        <input type="text" id="Instagram" name="Instagram" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu NOMBRE DE USUARIO" />
+                                        <label id="Instagram" for="Instagram">Instagram</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre de usuario de Instagram (sin @)</p><br>
+                                        <input type="text" id="Instagram" name="Instagram" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre de usuario" />
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input GitHub-->
-                                        <label id="GitHub" for="GitHub">GitHub</label><br><br>
-                                        <input type="text" id="GitHub" name="GitHub" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu NOMBRE DE USUARIO" />
+                                        <label id="GitHub" for="GitHub">GitHub</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre de usuario de GitHub</p><br>
+                                        <input type="text" id="GitHub" name="GitHub" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre de usuario" />
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input Linkedin-->
-                                        <label id="Linked In" for="Linked In"> Linked In</label><br><br>
-                                        <input type="text" id="Linkedin" name="Linkedin" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu NOMBRE DE USUARIO" />
+                                        <label id="Linked In" for="Linked In"> LinkedIn</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #3b3838;">Inserte el link de su cuenta de Linkedin</p><br>
+                                        <input type="text" id="Linkedin" name="Linkedin" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre de usuario" />
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input Twitter-->
-                                        <label id="Twitter" for="Twitter">Twitter</label><br><br>
-                                        <input type="text" id="Twitter" name="Twitter" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu NOMBRE DE USUARIO" />
+                                        <label id="Twitter" for="Twitter">Twitter</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre de usuario de Twitter (sin @)</p><br>
+                                        <input type="text" id="Twitter" name="Twitter" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre de usuario" />
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                        <!--Label e input Youtube-->
-                                        <label id="Youtube" for="Youtube">Youtube</label><br><br>
-                                        <input type="text" id="Youtube" name="Youtube" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa el NOMBRE DE TU CANAL" />
+                                        <label id="Youtube" for="Youtube">Youtube</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre de su canal de Youtube</p><br>
+                                        <input type="text" id="Youtube" name="Youtube" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa el nombre de su canal" />
                                     </span>
 
                                     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                         <!--Label e input Discord-->
-                                        <label id="DiscordLink" for="DiscordLink">Discord</label><br><br>
-                                        <input type="text" id="DiscordLink" name="DiscordLink" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa el LINK DE INVITACION DE TU SERVIDOR" onchange="validarLink(this)"/>
+                                        <label id="DiscordLink" for="DiscordLink">Discord</label>
+                                        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte el link de acceso a su servidor de Discord</p><br>
+                                        <input type="text" id="DiscordLink" name="DiscordLink" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese el link de invitación de su servidor" onchange="validarLink(this)"/>
                                     </span>
                                     <!--Aqui va a ir la seleccion de plantillas-->
                                 </div>
                                 <li id="cid_101" class="form-input-wide" data-type="control_head">
                                     <div class="form-header-group  header-small">
                                         <div class="header-text httal htvam">
-                                            <h3 id="header_101" class="form-header" data-component="header">Selección de Plantilla</h3>
+                                            <h2 id="header_101" class="form-header" data-component="header">Selección de Plantilla</h2>
                                         </div>
                                     </div>
                                 </li>
@@ -200,6 +221,8 @@ function validarEspacios(event) {
                                         <img src="https://maidenware1.s3.us-east-2.amazonaws.com/imgboton3.jpg">
                                         <label>Plantilla 3</label>
                                     </label>
+                                    <span id="error-mensaje" style="color: red; display: none;">Por favor, seleccione una opción.</span>
+
                                 </div>
                                 <!--Java de Card seleccionada-->
                                 <script>

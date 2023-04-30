@@ -306,3 +306,9 @@
               opacity: 0;
             }
           }
+          #small-paragraph {
+            font-size: 0.8em; /* tamaño de letra más pequeño que el del texto circundante */
+            line-height: 1.2; /* separación entre líneas */
+            margin: 0.5em 0; /* margen superior e inferior */
+            color:#000000; /* color del texto */
+          }
