@@ -108,7 +108,7 @@ function mostrarContrasena() {
         }
 };
 </script>  
-    <form class="jotform-form" action="oui.php" method="post" onsubmit="validarEspacios(event)" id="signup-form">
+    <form class="jotform-form" action="backend-signup.php" method="post" onsubmit="validarEspacios(event)" id="signup-form">
         <div role="main" class="form-all">
             <div style="text-align: center;">
                 <!--Aqui nuestro logo y el header-->
@@ -145,7 +145,7 @@ function mostrarContrasena() {
                                 <label id="Nombre" for="Nombre"> Nombre de usuario<b style="color: red;">*</b></label>
                                 <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Es el nombre que utilizarás para identificarte en la plataforma, utiliza de preferencía letras, números, guiones y guiones bajos</p>
                                 <br>
-                                <input type="text" id="nombre_usuario" name="Nombre de usuario" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/><br>
+                                <input type="text" id="nombre_usuario" name="nombre_usuario" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/><br>
                                 <span id="username-error" class="error-message"></span>
                             </span>
                            <!---->
@@ -172,7 +172,9 @@ function mostrarContrasena() {
                                 <label>
                                     <button type="button" onclick="mostrarContrasena()">Mostrar/Ocultar</button>
                                 </label>                            </span>
+                                <input type="hidden" value="1" name="oui"> 
                         </div>
+
                 <li class="form-line" data-type="control_button" id="id_102">
                     <div id="cid_102" class="form-input-wide">
                         <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"></div>
