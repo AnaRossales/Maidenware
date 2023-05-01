@@ -7,19 +7,20 @@
     <link href="css/Estiloformulario1.css" rel="stylesheet" type="text/css" />
     <link href="css/EstiloFormulario2.css" rel="stylesheet" type="text/css"  />
     <link href="css/Estilos.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
 </head>
-<body>
-    <script>
-    //window.onload = function() {
-        //alert('¡Bienvenido/a! Gracias por elegir nuestro servicio. \n Para poder aprovechar todas las funcionalidades de nuestra plataforma, te recomendamos crear una cuenta. ¡Es fácil y rápido! \nSolo tienes que llenar los datos y hacer clic en el botón "Registrarse" y seguir los pasos indicados. \n Una vez registrado/a, podrás disfrutar de todos los beneficios exclusivos que tenemos para ti. \n¡No esperes más y se parte de nuestra comunidad! \n- Equipo de Maidenware');
-      //};
+<script>
+    window.onload = function() {
+        alert('¡Bienvenido/a! Gracias por elegir nuestro servicio. \n Para poder aprovechar todas las funcionalidades de nuestra plataforma, te recomendamos crear una cuenta. ¡Es fácil y rápido! \nSolo tienes que llenar los datos y hacer clic en el botón "Registrarse" y seguir los pasos indicados. \n Una vez registrado/a, podrás disfrutar de todos los beneficios exclusivos que tenemos para ti. \n¡No esperes más y se parte de nuestra comunidad! \n- Equipo de Maidenware');
+      };
+
         //Esta funcion sirve para comprobar que lo que el usuario inserto en los espacios de Facebook y Discord realmente sean links 
 //Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
        
 function validarEspacios(event) {
-  event.preventDefault(); // Detener el envío del formulario por defecto
 
+  event.preventDefault(); // Detener el envío del formulario por defecto
+  
   // Expresiones regulares para buscar espacios al inicio y caracteres no permitidos
   const regexInicio = /^\s+/;
  // const regexInvalidos = /[<>''"]/;
@@ -28,8 +29,8 @@ function validarEspacios(event) {
   const emojiRegex = /\p{Emoji}/gu;
   const regexDigitos = /\d/;
   const regexSeguridad = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-  const passwordInput = document.getElementById("contrasena");
-  const confirmPasswordInput = document.getElementById("contrasena2");
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirm-password");
 
   // Obtener todos los inputs dentro del formulario
   const inputs = document.getElementsByTagName('input');
@@ -62,11 +63,6 @@ function validarEspacios(event) {
         alert(`Los emojis no estan permitidos`);
         return;
     }
-    //if (regexInvalidos.test(input.value)) {
-      // Mostrar mensaje de error si el valor contiene caracteres no permitidos
-      //alert(`El valor ingresado en el campo ${input.name} no es válido`);
-      //return;
-   // }
     if (input.type === 'email' && !regexEmail.test(input.value)) {
       // Mostrar mensaje de error si el valor del campo de correo electrónico no es válido
       alert(`El correo electrónico ingresado no es válido`);
@@ -77,18 +73,42 @@ function validarEspacios(event) {
       alert(`El valor ingresado en el campo ${input.name} no es un número válido`);
       return;
     }
-  
   if (passwordInput.value !== confirmPasswordInput.value) {
     alert("Las contraseñas no coinciden");
     return;
+  }else{
+    document.getElementById("signup-form").submit();
   }
   }
-  // Enviar el formulario
-  event.target.submit();
-
 }  
-</script>    
-    <form class="jotform-form" action="google.com" method="post" onsubmit="validarEspacios(event)">
+function mostrarContrasena() {
+        const campo = document.getElementById("password");
+        const campo2 = document.getElementById("confirm-password");
+        if (campo.type === "password") {
+          campo.type = "text";
+        } else {
+          campo.type = "password";
+        }
+        if (campo2.type === "password") {
+          campo2.type = "text";
+        } else {
+          campo2.type = "password";
+        }
+      }
+      
+      showPasswordCheckbox.onchange = function() {
+        const campo = document.getElementById("password");
+        const campo2 = document.getElementById("confirm-password");
+        if (showPasswordCheckbox.checked) {
+          campo.type = "text";
+          campo2.type = "text";
+        } else {
+          campo.type = "password";
+          campo2.type = "password";
+        }
+};
+</script>  
+    <form class="jotform-form" action="oui.php" method="post" onsubmit="validarEspacios(event)" id="signup-form">
         <div role="main" class="form-all">
             <div style="text-align: center;">
                 <!--Aqui nuestro logo y el header-->
@@ -142,25 +162,27 @@ function validarEspacios(event) {
                                 <!--Label e input profesion-->
                                 <label id="contrasena" for="contrasena"> Contraseña <b style="color: red;">*</b> </label>
                                 <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Crea una contraseña segura con al menos 8 caracteres, una letra mayuscula, una letra minuscula, un número y un caracter especial.</p><br>
-                                <input type="password" id="contrasena" name="contrasena" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                                <input type="password" id="password" name="contrasena" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
                             </span>
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                 <!--Label e input profesion-->
                                 <label id="contrasena2" for="contrasena2"> Confirmar Contraseña <b style="color: red;">*</b> </label>
                                 <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Vuelva a escribir tu contraseña para confirmar que las has escrito correctamente</p><br>
-                                <input type="password" id="contrasena2" name="contrasena2" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Vuelva a insertar su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
-                            </span>
+                                <input type="password" id="confirm-password" name="contrasena2" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Vuelva a insertar su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                                <label>
+                                    <button type="button" onclick="mostrarContrasena()">Mostrar/Ocultar</button>
+                                </label>                            </span>
                         </div>
                 <li class="form-line" data-type="control_button" id="id_102">
                     <div id="cid_102" class="form-input-wide">
-                        <div data-align="auto"
-                            class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">                    </div>
+                        <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"></div>
                     </div>
                     <br><br>
                     <div style="display: flex; justify-content: center;">
                     <div class="wrap"><br>
-                    <input type="submit" class="btn-outline-primary" value="Probar">
-
+                        <input type="reset" value="Limpiar datos">
+                    <input type="submit" class="btn-outline-primary" value="Probar" id="enviar">
+                    
                     <!--Aqui falta -->
 
 
