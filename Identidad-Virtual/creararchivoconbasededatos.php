@@ -1,17 +1,24 @@
 <?php
-$nombre_archivo = $_POST['Nombre'];
+$nombre_archivo = $_COOKIE['nombreusuario'];
 $plantilla1= "include 'boceto1.php';";
 $plantilla2= "include 'boceto2.php';";
 $cierre = 'echo "</body></html>";';
 $echo = "echo '";
 $cierreecho="';";
 if (file_exists($nombre_archivo. '.php')) {
-    echo "El archivo ya existe";
-} else {
+    $nameitself = basename($_SERVER["PHP_SELF"], ".php");
+    $nombre_archivo1 = $nombre_archivo . ".php";
+    unlink($nombre_archivo1);
+    $conn = mysqli_connect('localhost','root', '', 'identidad_virtual');
+    $sql = "SELECT * FROM login WHERE nombre_de_usuario ='".$nombre_archivo."';";
+    $result_identidad_virtual = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result_identidad_virtual);
+    $sql2 = "DELETE * FROM identidad_virtual WHERE id_usuario =".$row['id'].";";
+    $result_identidad_virtual1 = mysqli_query($conn, $sql2);
+}
     $plantillaselecionada =$_POST['plantillaseleccionada'];
 	$contenido = '<?php
     /*aqui traer de la base de datos*/
-    $nameitself = basename($_SERVER["PHP_SELF"], ".php");
     include "incluyemelasvariablesconDBMS.php";';
     require_once 'insertatodoenlabasededatos.php';
     if($plantillaselecionada==1){
@@ -48,5 +55,5 @@ if (file_exists($nombre_archivo. '.php')) {
 	file_put_contents($nombre_archivo . '.php', $contenido);
     echo '<br>'.$id.'<br>'.$nombre.'<br>'.$correo.'<br>'.$profesion.'<br>'.$NumeroWhats.'<br>'.$Instagram.'<br>'.$github.'<br>'.$Linkedin.'<br>'.$twitter.'<br>'.$Youtube.'<br>'.$Discord.'<br>'.$Facebook;
 	echo "El archivo " . $nombre_archivo . ".php ha sido creado correctamente.";
-}
+
 ?>
