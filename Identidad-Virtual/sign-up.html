@@ -11,19 +11,10 @@
 </head>
 <body>
     <script>
-      window.onload = function() {
-        alert('¡Bienvenido/a! Gracias por elegir nuestro servicio. \n Para poder aprovechar todas las funcionalidades de nuestra plataforma, te recomendamos crear una cuenta. ¡Es fácil y rápido! \nSolo tienes que llenar los datos y hacer clic en el botón "Registrarse" y seguir los pasos indicados. \n Una vez registrado/a, podrás disfrutar de todos los beneficios exclusivos que tenemos para ti. \n¡No esperes más y se parte de nuestra comunidad! \n- Equipo de Maidenware');
-      };
+    //window.onload = function() {
+        //alert('¡Bienvenido/a! Gracias por elegir nuestro servicio. \n Para poder aprovechar todas las funcionalidades de nuestra plataforma, te recomendamos crear una cuenta. ¡Es fácil y rápido! \nSolo tienes que llenar los datos y hacer clic en el botón "Registrarse" y seguir los pasos indicados. \n Una vez registrado/a, podrás disfrutar de todos los beneficios exclusivos que tenemos para ti. \n¡No esperes más y se parte de nuestra comunidad! \n- Equipo de Maidenware');
+      //};
         //Esta funcion sirve para comprobar que lo que el usuario inserto en los espacios de Facebook y Discord realmente sean links 
-        function validarLink(input) {
-          // Expresión regular para validar enlaces
-          const regex = /^(ftp|http|https):\/\/[^ "]+$/;
-          // Validar si el valor del input coincide con la expresión regular
-          if (!regex.test(input.value)) {
-            alert("El enlace ingresado no es válido");
-            input.value = "";
-          }
-        }
 //Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
        
 function validarEspacios(event) {
@@ -31,8 +22,14 @@ function validarEspacios(event) {
 
   // Expresiones regulares para buscar espacios al inicio y caracteres no permitidos
   const regexInicio = /^\s+/;
-  const regexInvalidos = /[<>''"]/;
+ // const regexInvalidos = /[<>''"]/;
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const regexFin = /\s+/;
+  const emojiRegex = /\p{Emoji}/gu;
+  const regexDigitos = /\d/;
+  const regexSeguridad = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  const passwordInput = document.getElementById("contrasena");
+  const confirmPasswordInput = document.getElementById("contrasena2");
 
   // Obtener todos los inputs dentro del formulario
   const inputs = document.getElementsByTagName('input');
@@ -40,18 +37,39 @@ function validarEspacios(event) {
   // Recorrer los inputs y validar si tienen espacios al inicio o caracteres no permitidos
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i];
+    input.value = input.value.replace(/ /g, '');
     if (regexInicio.test(input.value)) {
       // Eliminar los espacios al inicio del valor del input
       input.value = input.value.replace(regexInicio, '');
     }
-    if (regexInvalidos.test(input.value)) {
-      // Mostrar mensaje de error si el valor contiene caracteres no permitidos
-      alert(`El valor ingresado en el campo ${input.name} no es válido`);
-      return;
+    if (regexFin.test(input.value)) {
+  // Eliminar los espacios al final del valor del input
+  input.value = input.value.replace(regexFin, '');
     }
+    if(regexDigitos.test(input.value) && !isNan(input.value)){
+        if(emojiRegex.test(input.value)){
+        alert(`Los emojis no estan permitidos`);
+        return;
+    }
+    }
+    if(input.type==="text"){
+        if(!/^[a-zA-Z0-9\p{Z}_-]*$/.test(input.value)){
+            alert(`El ${input.name} solo puede contener letras, números, guiones y guiones bajos.`);
+  return;
+        }
+    }
+    if(emojiRegex.test(input.value)){
+        alert(`Los emojis no estan permitidos`);
+        return;
+    }
+    //if (regexInvalidos.test(input.value)) {
+      // Mostrar mensaje de error si el valor contiene caracteres no permitidos
+      //alert(`El valor ingresado en el campo ${input.name} no es válido`);
+      //return;
+   // }
     if (input.type === 'email' && !regexEmail.test(input.value)) {
       // Mostrar mensaje de error si el valor del campo de correo electrónico no es válido
-      alert(`El correo electrónico ingresado en el campo ${input.name} no es válido`);
+      alert(`El correo electrónico ingresado no es válido`);
       return;
     }
     if (input.type === 'number' && isNaN(input.value)) {
@@ -59,14 +77,18 @@ function validarEspacios(event) {
       alert(`El valor ingresado en el campo ${input.name} no es un número válido`);
       return;
     }
+  
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    alert("Las contraseñas no coinciden");
+    return;
+  }
   }
   // Enviar el formulario
   event.target.submit();
 
-}
-        
+}  
 </script>    
-    <form class="jotform-form" action="queplantillaseleccione.php" method="post" onsubmit="validarEspacios(event)">
+    <form class="jotform-form" action="google.com" method="post" onsubmit="validarEspacios(event)">
         <div role="main" class="form-all">
             <div style="text-align: center;">
                 <!--Aqui nuestro logo y el header-->
@@ -78,9 +100,9 @@ function validarEspacios(event) {
                 <li id="cid_89" class="form-input-wide" data-type="control_head">
                     <div class="form-header-group  header-default">
                         <div class="header-text httal htvam">
-                            <h1 id="header_89" class="form-header" data-component="header" style="text-align: center;">Registro Usuario</h1>
+                            <h1 id="header_89" class="form-header" data-component="header" style="text-align: center;">Crea tu cuenta</h1>
                             <br><br>
-                            <p>Completa este formulario con tus datos personales y enlaces a tus redes sociales para crear tu <b>Identidad Virtual</b>. Asegúrate de llenar cuidadosamente todos los campos para que otros puedan encontrarte en línea</p>
+                            <p>Bienvenido a la familia <i>Maidenware</i>, llena los siguientes campos para poder registrar su usuario y acceder a su <b>Identidad Virtual</b></p>
                         </div>
                     </div>
                 </li>
@@ -89,9 +111,9 @@ function validarEspacios(event) {
                 <li id="cid_101" class="form-input-wide" data-type="control_head">
                     <div class="form-header-group  header-small">
                         <div class="header-text httal htvam">
-                            <h2 id="header_101" class="form-header" data-component="header">Información Personal</h2>
+                            <h2 id="header_101" class="form-header" data-component="header">Información de la cuenta</h2>
                         </div>
-                        <p>La siguiente información es la más importante y aparecerá en su tarjeta de presentación, por lo que es fundamental que la verifique y la llene cuidadosamente.</p>
+                        <p>Siguiente sección, inserte su nombre de usuario, su correo y su contraseña.</p>
                     </div>
                 </li>
                 <!--Datos Personales-->
@@ -100,32 +122,33 @@ function validarEspacios(event) {
                         <div data-wrapper-react="true">
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                 <!--Label e input nombre-->
-                                <label id="Nombre" for="Nombre"> Nombre <b style="color: red;">*</b></label>
-                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre, el cual aparecera dentro de su tarjeta de presentación</p>
+                                <label id="Nombre" for="Nombre"> Nombre de usuario<b style="color: red;">*</b></label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Es el nombre que utilizarás para identificarte en la plataforma, utiliza de preferencía letras, números, guiones y guiones bajos</p>
                                 <br>
-                                <input type="text" id="Nombre" name="Nombre" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/>
+                                <input type="text" id="nombre_usuario" name="Nombre de usuario" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/><br>
+                                <span id="username-error" class="error-message"></span>
                             </span>
-                           <!-- <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-                                
-                                <label id="id" for="id"> id <b style="color: red;">*</b></label>
-                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre, el cual aparecera dentro de su tarjeta de presentación</p>
-                                <br>
-                                <input type="number" id="id" name="id" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu nombre"  required/>
-                            </span>-->
+                           <!---->
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
 
                                 <!--Label e input correo-->
                                 <label id="Correo" for="Correo"> Correo Electrónico <b style="color: red;">*</b> </label>
-                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su correo, con el cual las personas que lo vean se podran contactarse con usted</p>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Introduce una dirección de correo válida para poder recuperar tu cuenta si pierdes acceso</p>
                                 <br>
                                 <input type="email" id="Correo" name="Correo" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su correo" />
                             </span>
 
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                 <!--Label e input profesion-->
-                                <label id="Profesion" for="Profesion"> Profesión <b style="color: red;">*</b> </label>
-                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su profesión, la cual se verá reflejada en su tarjeta de presentación</p><br>
-                                <input type="text" id="Profesion" name="Profesion" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su profesion" />
+                                <label id="contrasena" for="contrasena"> Contraseña <b style="color: red;">*</b> </label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Crea una contraseña segura con al menos 8 caracteres, una letra mayuscula, una letra minuscula, un número y un caracter especial.</p><br>
+                                <input type="password" id="contrasena" name="contrasena" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                                <!--Label e input profesion-->
+                                <label id="contrasena2" for="contrasena2"> Confirmar Contraseña <b style="color: red;">*</b> </label>
+                                <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Vuelva a escribir tu contraseña para confirmar que las has escrito correctamente</p><br>
+                                <input type="password" id="contrasena2" name="contrasena2" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Vuelva a insertar su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
                             </span>
                         </div>
                 <li class="form-line" data-type="control_button" id="id_102">
