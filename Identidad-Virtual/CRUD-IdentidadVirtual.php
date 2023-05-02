@@ -138,11 +138,11 @@ try {
         <label id="Correo" for="Correo"> Correo Electrónico <b style="color: red;">*</b> </label>
         <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su correo, con el cual las personas que lo vean se podran contactarse con usted</p>
         <br>
-        <input type="email" id="Correo" name="Correo" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su correo" value="'.$correo.'/>
+        <input type="email" id="Correo" name="Correo" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su correo" value="'.$correo.'"/>
         </span>';
         echo '<label id="Profesion" for="Profesion"> Profesión <b style="color: red;">*</b> </label>
         <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su profesión, la cual se verá reflejada en su tarjeta de presentación</p><br>
-        <input type="text" id="Profesion" name="Profesion" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su profesion" value="'.$profesion.' />
+        <input type="text" id="Profesion" name="Profesion" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su profesion" value="'.$profesion.'" />
         </span>
         </div>
         <li id="cid_101" class="form-input-wide" data-type="control_head">
@@ -287,15 +287,9 @@ try {
         <input type="text" id="Nombre" name="Nombre" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/>
     </span>
     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-        
-        <label id="id" for="id"> id <b style="color: red;">*</b></label>
-        <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre, el cual aparecera dentro de su tarjeta de presentación</p>
-        <br>
         <input type="number" id="id" name="id" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu nombre"  required/>
     </span>
     <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-
-        Lel e input correo
         <label id="Correo" for="Correo"> Correo Electrónico <b style="color: red;">*</b> </label>
         <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su correo, con el cual las personas que lo vean se podran contactarse con usted</p>
         <br>
@@ -388,15 +382,9 @@ try {
     <input type="text" id="Nombre" name="Nombre" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/>
 </span>
 <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-    
-    <label id="id" for="id"> id <b style="color: red;">*</b></label>
-    <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su nombre, el cual aparecera dentro de su tarjeta de presentación</p>
-    <br>
     <input type="hidden" id="id" name="id" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingresa tu nombre" value="'.$_COOKIE['ID_Usuario'].'" required/>
 </span>
 <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-
-    Lel e input correo
     <label id="Correo" for="Correo"> Correo Electrónico <b style="color: red;">*</b> </label>
     <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su correo, con el cual las personas que lo vean se podran contactarse con usted</p>
     <br>
@@ -404,7 +392,6 @@ try {
 </span>
 
 <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
-    Label e input profesion
     <label id="Profesion" for="Profesion"> Profesión <b style="color: red;">*</b> </label>
     <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Inserte su profesión, la cual se verá reflejada en su tarjeta de presentación</p><br>
     <input type="text" id="Profesion" name="Profesion" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su profesion" />

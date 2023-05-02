@@ -2,6 +2,7 @@
 $conn = mysqli_connect('localhost','root', '', 'identidad_virtual');
 
 // Verifica si la conexión es exitosa
+$nameitself = basename($_SERVER["PHP_SELF"], ".php");
 $sql = "SELECT id FROM login WHERE nombre_de_usuario ='".$nameitself."';";
 $result_identidad_virtual = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result_identidad_virtual);

@@ -13,7 +13,7 @@ if (file_exists($nombre_archivo. '.php')) {
     $sql = "SELECT * FROM login WHERE nombre_de_usuario ='".$nombre_archivo."';";
     $result_identidad_virtual = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result_identidad_virtual);
-    $sql2 = "DELETE * FROM identidad_virtual WHERE id_usuario =".$row['id'].";";
+    $sql2 = "DELETE FROM identidad_virtual WHERE id_usuario =".$row['id'].";";
     $result_identidad_virtual1 = mysqli_query($conn, $sql2);
 }
     $plantillaselecionada =$_POST['plantillaseleccionada'];
@@ -55,5 +55,6 @@ if (file_exists($nombre_archivo. '.php')) {
 	file_put_contents($nombre_archivo . '.php', $contenido);
     echo '<br>'.$id.'<br>'.$nombre.'<br>'.$correo.'<br>'.$profesion.'<br>'.$NumeroWhats.'<br>'.$Instagram.'<br>'.$github.'<br>'.$Linkedin.'<br>'.$twitter.'<br>'.$Youtube.'<br>'.$Discord.'<br>'.$Facebook;
 	echo "El archivo " . $nombre_archivo . ".php ha sido creado correctamente.";
+    echo "<a href='".$nombre_archivo.".php'>Aqui esta el link que hiciste</a>";
 
 ?>

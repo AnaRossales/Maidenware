@@ -35,7 +35,6 @@ try {
     if (!mysqli_query($conn, $sql)) {
         throw new Exception("Error al registrar el usuario, contacte al responsable de la página");
     }
-    echo "<script>alert('Registro exitoso, felicidades ya eres parte de la familia Maidenware, ahora toca personalizar tu identidad virtual');</script>";
     
 
 // Consulta para obtener el Select ID de la tabla 'mi_tabla'
@@ -51,7 +50,7 @@ if ($resultado->num_rows > 0) {
     echo "No se encontró el Select ID";
 }
 
-// Creamos la cookie con el valor del Select ID y un tiempo de vida de 5 minutos
+// Creamos la cookie con el valor del Select ID y un tiempo de vida de 50 minutos
 setcookie("ID_Usuario", $id, time() + 3000, "/");
 setcookie("nombreusuario", $nombreusuario, time() + 3000, "/");
 
@@ -60,8 +59,8 @@ setcookie("nombreusuario", $nombreusuario, time() + 3000, "/");
 $conn->close();
 
 
-
-    header('Location:verificacion-creacion-cookie.php');
+echo "<script>alert('Registro exitoso, felicidades ya eres parte de la familia Maidenware, ahora toca personalizar tu identidad virtual');</script>";
+    header('Location:CRUD-IdentidadVirtual.php');
 } catch (Exception $e) {
     echo "<script>alert('".$e->getMessage()."');</script>";
     echo "<script>history.go(-1);</script>";

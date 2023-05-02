@@ -3,7 +3,7 @@ echo '<form id="guardar" method="post" action="creararchivoconbasededatos.php" >
 echo "<input type='hidden' name='plantillaseleccionada' value='".$plantillaselecionada."'>";
 $nombre = $_POST['Nombre'];
 echo "<input type='hidden' name='Nombre' value='".$nombre."'>";
-$id = $_POST['id'];
+$id = $_COOKIE['ID_Usuario'];
 echo "<input type='hidden' name='id' value='".$id."'>";
 $correo = $_POST['Correo'];
 echo "<input type='hidden' name='correo' value='".$correo."'>";
