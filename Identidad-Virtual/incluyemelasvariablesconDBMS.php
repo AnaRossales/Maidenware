@@ -2,23 +2,27 @@
 $conn = mysqli_connect('localhost','root', '', 'identidad_virtual');
 
 // Verifica si la conexión es exitosa
-$sql = "SELECT * FROM identidad_virtual WHERE nombre='".$nameitself."';";
+$nameitself = basename($_SERVER["PHP_SELF"], ".php");
+$sql = "SELECT id FROM login WHERE nombre_de_usuario ='".$nameitself."';";
 $result_identidad_virtual = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result_identidad_virtual);
+$sql2 = "SELECT * FROM identidad_virtual WHERE id_usuario =".$row['id'].";";
+$result_identidad_virtual1 = mysqli_query($conn, $sql2);
 
 // Imprime los resultados de la consulta en la tabla identidad_virtual
-if (mysqli_num_rows($result_identidad_virtual) > 0) {
-    while($row = mysqli_fetch_assoc($result_identidad_virtual)) {
-        $nombre =$row["nombre"];
-        $correo = $row['correo_contacto'];
-        $profesion = $row['profesion'];
-        $NumeroWhats = $row['whatsapp'];
-        $Instagram = $row['instagram'];
-        $github = $row['github'];
-        $Linkedin= $row['linkedin'];
-        $twitter = $row['twitter'];
-        $Youtube=$row['youtube'];
-        $Discord=$row['discord'];
-        $Facebook=$row['facebook'];
+if (mysqli_num_rows($result_identidad_virtual1) > 0) {
+    while($rows = mysqli_fetch_assoc($result_identidad_virtual1)) {
+        $nombre =$rows["nombre"];
+        $correo = $rows['correo_contacto'];
+        $profesion = $rows['profesion'];
+        $NumeroWhats = $rows['whatsapp'];
+        $Instagram = $rows['instagram'];
+        $github = $rows['github'];
+        $Linkedin= $rows['linkedin'];
+        $twitter = $rows['twitter'];
+        $Youtube=$rows['youtube'];
+        $Discord=$rows['discord'];
+        $Facebook=$rows['facebook'];
     }
 }else{
     header('Location: index.html');

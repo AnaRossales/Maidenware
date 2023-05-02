@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="es-ES" class="supernova">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+    <title>Formulario de Identidad Virtual </title>
+    <link href="css/Estiloformulario1.css" rel="stylesheet" type="text/css" />
+    <link href="css/EstiloFormulario2.css" rel="stylesheet" type="text/css"  />
+    <link href="css/Estilos.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+</head>
+<script>        //Esta funcion sirve para comprobar que lo que el usuario inserto en los espacios de Facebook y Discord realmente sean links 
+//Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
+       
+function validarEspacios(event) {
+  if (true) {
+    document.getElementById("signup-form").submit();
+  }
+  
+}  
+function mostrarContrasena() {
+        const campo = document.getElementById("password");
+        const campo2 = document.getElementById("confirm-password");
+        if (campo.type === "password") {
+          campo.type = "text";
+        } else {
+          campo.type = "password";
+        }
+        if (campo2.type === "password") {
+          campo2.type = "text";
+        } else {
+          campo2.type = "password";
+        }
+      }
+    
+;
+</script>  
+    <form class="jotform-form" action="login.php" method="post" onsubmit="validarEspacios(event)" id="signup-form">
+        <div role="main" class="form-all">
+            <div style="text-align: center;">
+                <!--Aqui nuestro logo y el header-->
+                <img src="https://maidenware1.s3.us-east-2.amazonaws.com/Logo_fondo_blanco.png" alt="Logo_fondo_blanco" width="60%">
+            </div>
+
+            <!--Aqui la sección-->
+            <ul class="form-section page-section">
+                <li id="cid_89" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-default">
+                        <div class="header-text httal htvam">
+                            <h1 id="header_89" class="form-header" data-component="header" style="text-align: center;">Iniciar Sesión</h1>
+                        </div>
+                    </div>
+                </li>
+
+                <!--Aqui la descripción de la sección de arriba-->
+
+                <!--Datos Personales-->
+                <li class="form-line form-line-column form-col-1" data-type="control_fullname" id="Nombre">
+                    <div id="cid_3" class="form-input-wide">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                                <!--Label e input nombre-->
+                                <label id="Nombre" for="Nombre"> Nombre de usuario o correo</label>
+                                <br><br>
+                                <input type="text" id="nombreusuario" name="nombreusuario" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su nombre"  required/><br>
+                                <span id="username-error" class="error-message"></span>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                                <!--Label e input profesion-->
+                                <label id="contrasena" for="contrasena"> Contraseña</label>
+<br><br>                                <input type="password" id="password" name="contrasena" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                            </span>
+
+                                    <button type="button" onclick="mostrarContrasena()">Mostrar/Ocultar</button>
+                                </label>                           
+                                <input type="hidden" value="1" name="oui"> 
+                        </div>
+
+                <li class="form-line" data-type="control_button" id="id_102">
+                    <div id="cid_102" class="form-input-wide">
+                        <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"></div>
+                    </div>
+                    <br>
+                    <div style="display: flex; justify-content: center;">
+                    <div class="wrap">
+                    <input type="submit" class="btn-outline-primary" value="Probar" id="enviar"></div></div></li></div></li>
+                    </ul></div>
+                    <!--Aqui falta -->
+
+
+                        <!--<a href="#!" class="btn btn-outline-primary">Log In</a>
+			 <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a>-->
+                      </div>
+                      <br>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</body>
+</html>
