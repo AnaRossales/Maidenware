@@ -10,5 +10,5 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assetsplantilla1/assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assetsplantilla1/assets/css/noscript.css" /></noscript>
-        </head><body class="is-preload">';include 'plantilla1.php';echo "</body></html>"; mysqli_close();
+        </head><body class="is-preload">';include 'plantilla1.php';echo "</body></html>";
 	?>
