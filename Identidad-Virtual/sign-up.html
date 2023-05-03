@@ -18,7 +18,7 @@
 //Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
        
 function validarEspacios(event) {
-
+alert('si ingresa');
   event.preventDefault(); // Detener el envío del formulario por defecto
   
   // Expresiones regulares para buscar espacios al inicio y caracteres no permitidos
@@ -26,15 +26,15 @@ function validarEspacios(event) {
  // const regexInvalidos = /[<>''"]/;
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const regexFin = /\s+/;
-  const emojiRegex = /\p{Emoji}/gu;
+  const emojiRegex = /\p{Emoji}/g;
   const regexDigitos = /\d/;
   const regexSeguridad = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const passwordInput = document.getElementById("password");
   const confirmPasswordInput = document.getElementById("confirm-password");
+  const regexValido = /^[a-zA-Z0-9_-]*$/;
 
   // Obtener todos los inputs dentro del formulario
   const inputs = document.getElementsByTagName('input');
-
   // Recorrer los inputs y validar si tienen espacios al inicio o caracteres no permitidos
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i];
@@ -47,7 +47,7 @@ function validarEspacios(event) {
   // Eliminar los espacios al final del valor del input
   input.value = input.value.replace(regexFin, '');
     }
-    if(regexDigitos.test(input.value) && !isNan(input.value)){
+    if(!regexValido.test(input.value)){
         if(emojiRegex.test(input.value)){
         alert(`Los emojis no estan permitidos`);
         return;
@@ -55,7 +55,7 @@ function validarEspacios(event) {
     }
     if(input.type==="text"){
         if(!/^[a-zA-Z0-9\p{Z}_-]*$/.test(input.value)){
-            alert(`El ${input.name} solo puede contener letras, números, guiones y guiones bajos.`);
+            alert(`El nombre de usuario solo puede contener letras, números, guiones y guiones bajos.`);
   return;
         }
     }
@@ -73,6 +73,7 @@ function validarEspacios(event) {
       alert(`El valor ingresado en el campo ${input.name} no es un número válido`);
       return;
     }
+    alert('llega a la ultima validación');
   if (passwordInput.value !== confirmPasswordInput.value) {
     alert("Las contraseñas no coinciden");
     return;

@@ -20,9 +20,8 @@ if (!$conn) {
         $sql = "INSERT INTO `identidad_virtual` (`id`, `id_usuario`, `nombre`, `profesion`, `facebook`, `twitter`, `instagram`, `youtube`, `linkedin`, `whatsapp`, `github`, `discord`, `correo_contacto`) 
         VALUES ('', '$id', '$nombre', '$profesion', '$Facebook', '$twitter', '$Instagram', '$Youtube', '$Linkedin', '$NumeroWhats', '$github', '$Discord', '$correo')";
 if (mysqli_query($conn, $sql)) {
-    echo "Se ha insertado un nuevo registro en la tabla usuarios.";
 } else {
-    echo "Error al insertar el registro: " . mysqli_error($conn);
+    echo "Error al insertar el registro: ";
 }
 
 mysqli_close($conn);

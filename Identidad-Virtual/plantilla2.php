@@ -26,10 +26,9 @@ echo '	<div id="wrapper">
                                 echo '<li><a href="'.$Linkedin.'/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>';
                             }
 							if($Youtube!=""){
-                                echo '<li><a href=""https://youtube.com/'.$Youtube.'/" class="icon brands fa-youtube"><span class="label">Youtube</span></a></li>';
                             }
                             if($twitter!=""){
-                                echo '<li><a href="https://twitter.com/'.$twitter.'/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>';
+                                echo '<li><a href="https://twitter.com/@'.$twitter.'/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>';
                             }
 							if($Discord!=""){
                                 echo '<li><a href="'.$twitter.'" class="icon brands fa-discord"><span class="label">Discord</span></a></li>';

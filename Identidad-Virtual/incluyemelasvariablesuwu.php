@@ -36,7 +36,6 @@ echo "<input type='hidden' name='twitter' value='".$twitter."'>";
 $Youtube=$_POST['Youtube'];
 
 if($Youtube!=""){
-    $Youtube = "@".$Youtube;
 echo "<input type='hidden' name='Youtube' value='".$Youtube."'>";
 }
 

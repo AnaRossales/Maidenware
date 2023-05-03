@@ -35,7 +35,7 @@ echo '
                                 echo '<li><a href="https://twitter.com/'.$twitter.'/">Twitter</a></li>';
                             }
 							if($Youtube!=""){
-                                echo '<li><a href="https://youtube.com/'.$Youtube.'/">Youtube</a></li>';
+                                echo '<li><a href="https://youtube.com/@'.$Youtube.'/">Youtube</a></li>';
                             }
 							if($Discord!=""){
                                 echo '<li><a href="'.$Discord.'/">Servidor de Discord</a></li>';

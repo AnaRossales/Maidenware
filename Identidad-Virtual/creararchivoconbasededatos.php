@@ -53,8 +53,9 @@ if (file_exists($nombre_archivo. '.php')) {
     }
     $contenido = $contenido . "?>";
 	file_put_contents($nombre_archivo . '.php', $contenido);
-    echo '<br>'.$id.'<br>'.$nombre.'<br>'.$correo.'<br>'.$profesion.'<br>'.$NumeroWhats.'<br>'.$Instagram.'<br>'.$github.'<br>'.$Linkedin.'<br>'.$twitter.'<br>'.$Youtube.'<br>'.$Discord.'<br>'.$Facebook;
-	echo "El archivo " . $nombre_archivo . ".php ha sido creado correctamente.";
-    echo "<a href='".$nombre_archivo.".php'>Aqui esta el link que hiciste</a>";
+    echo "<script>alert('El archivo " . $nombre_archivo . " ha sido creado correctamente.');window.location.href = '".$nombre_archivo.".php';</script>";
+    //header("Location: " . $nombre_archivo . ".php");
+    //exit;
+    
 
 ?>
