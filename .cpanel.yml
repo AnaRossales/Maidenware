@@ -8,6 +8,7 @@ deployment:
     - /bin/cp -R plugins $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
     - /bin/cp -R PruebaNoUsuarios $DEPLOYPATH
+    - /bin/cp -R Identidad-Virtual $DEPLOYPATH
     - /bin/cp about-us.html $DEPLOYPATH
     - /bin/cp blog-details.html $DEPLOYPATH
     - /bin/cp products.html $DEPLOYPATH
