@@ -83,30 +83,3 @@ button:hover::after, button:focus::after {
     opacity: 0;
   }
 }
-.btn-primary {
-  background: #CF4A30;
-  color: #fff;
-  border-color: #CF4A30;
-}
-.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary:focus, .btn-primary.focus {
-  background: #F0B1A5 !important;
-  color: #fff;
-}
-.btn-primary.w-100:hover, .btn-primary.d-block:hover, .btn-primary.d-flex:hover, .btn-primary.effect-none:hover {
-  background-color: #F0B1A5 !important;
-}
-
-.btn-outline-primary {
-  background: #F0B1A5;
-  color: #CF4A30;
-}
-.btn-outline-primary::after {
-  background-color: #F0B1A5;
-}
-.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary:focus, .btn-outline-primary.focus {
-  background: #F0B1A5;
-  color: #fff;
-}
-.btn-outline-primary.w-100:hover, .btn-outline-primary.d-block:hover, .btn-outline-primary.d-flex:hover, .btn-outline-primary.effect-none:hover {
-  background: #e0f2e5;
-}

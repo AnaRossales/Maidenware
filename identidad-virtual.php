@@ -13,12 +13,12 @@
     $item->quantity = 1;
     $item->unit_price = 30;
     $preference->items = array($item);
-    $preference->save();
-    $preference->back_urls=array(
-      "success"=>"http://localhost/maidenware/pago-completo.php",
-      "failure"=>"https://",
-      "pending"=>"https://"
-    );
+    $preference->setbackUrls = array(
+      "success" => "https://www.maidenware.com.mx/log-in",
+      "failure" => "http://www.tu-sitio/failure",
+      "pending" => "http://www.tu-sitio/pending"
+  );
+  $preference->save();
     ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="https://maidenware1.s3.us-east-2.amazonaws.com/favicon.png" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
@@ -61,8 +61,8 @@
     <header class="navigation bg-tertiary">
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.png" alt="Wallet">
+    <a class="navbar-brand" href="index.html">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="https://maidenware1.s3.us-east-2.amazonaws.com/MAIDENWARE.png" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
@@ -213,8 +213,8 @@
 <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
   <input type="hidden" name="storeId" value="CJgq39kg6FH14gk3UVmxx9Bk5wmjTh8fDDxpXAgzw5J8" />
   <input type="hidden" name="checkoutDesc" value="Identidad Virtual" />
-  <input type="hidden" name="browserRedirect" value="https://moodle.org/mod/forum/discuss.php?d=337481" />
-  <input type="hidden" name="price" value="0.00102" />
+  <input type="hidden" name="browserRedirect" value="https://www.maidenware.com.mx" />
+  <input type="hidden" name="price" value="0.0000019" />
   <input type="hidden" name="currency" value="BTC" />
   <input type="image" class="submit" name="submit" src="https://maidenware1.s3.us-east-2.amazonaws.com/Bitcoin.png" style="width:209px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
 </form>
