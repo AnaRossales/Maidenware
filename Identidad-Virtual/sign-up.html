@@ -18,7 +18,6 @@
 //Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
        
 function validarEspacios(event) {
-alert('si ingresa');
   event.preventDefault(); // Detener el envío del formulario por defecto
   
   // Expresiones regulares para buscar espacios al inicio y caracteres no permitidos
@@ -73,7 +72,6 @@ alert('si ingresa');
       alert(`El valor ingresado en el campo ${input.name} no es un número válido`);
       return;
     }
-    alert('llega a la ultima validación');
   if (passwordInput.value !== confirmPasswordInput.value) {
     alert("Las contraseñas no coinciden");
     return;
@@ -163,13 +161,14 @@ function mostrarContrasena() {
                                 <!--Label e input profesion-->
                                 <label id="contrasena" for="contrasena"> Contraseña <b style="color: red;">*</b> </label>
                                 <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Crea una contraseña segura con al menos 8 caracteres, una letra mayuscula, una letra minuscula, un número y un caracter especial.</p><br>
-                                <input type="password" id="password" name="contrasena" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                                <input type="password" id="password" name="contrasena" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Ingrese su contraseña"
+                                required/>
                             </span>
                             <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
                                 <!--Label e input profesion-->
                                 <label id="contrasena2" for="contrasena2"> Confirmar Contraseña <b style="color: red;">*</b> </label>
                                 <br><p style="font-size: 0.8em; line-height: 1.2; margin: 0.5em 0; color: #666;">Vuelva a escribir tu contraseña para confirmar que las has escrito correctamente</p><br>
-                                <input type="password" id="confirm-password" name="contrasena2" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Vuelva a insertar su contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                                <input type="password" id="confirm-password" name="contrasena2" class="introducetexto" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" style="width: 600px;" placeholder="Vuelva a insertar su contraseña" required/>
                                 <label>
                                     <button type="button" onclick="mostrarContrasena()">Mostrar/Ocultar</button>
                                 </label>                            </span>
