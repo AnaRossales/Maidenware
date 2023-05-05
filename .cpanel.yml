@@ -2,22 +2,22 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home4/maidenwa/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp -R vendor $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp -R plugins $DEPLOYPATH
-    - /bin/cp -R js $DEPLOYPATH
-    - /bin/cp -R PruebaNoUsuarios $DEPLOYPATH
-    - /bin/cp -R Identidad-Virtual $DEPLOYPATH
-    - /bin/cp about-us.html $DEPLOYPATH
-    - /bin/cp blog-details.html $DEPLOYPATH
-    - /bin/cp products.html $DEPLOYPATH
-    - /bin/cp product-details.html $DEPLOYPATH
-    - /bin/cp checkout.html $DEPLOYPATH
-    - /bin/cp contact.html $DEPLOYPATH
-    - /bin/cp licese.txt $DEPLOYPATH
-    - /bin/cp special-offer.html $DEPLOYPATH
-    - /bin/cp terms.html $DEPLOYPATH
-    - /bin/cp testimonials.html $DEPLOYPATH
-    - /bin/cp product-details.php $DEPLOYPATH
-    - /bin/cp product-detail-prueba.php $DEPLOYPATH
+    - /bin/rsync index.html $DEPLOYPATH
+    - /bin/rsync -R vendor $DEPLOYPATH
+    - /bin/rsync -R assets $DEPLOYPATH
+    - /bin/rsync -R plugins $DEPLOYPATH
+    - /bin/rsync -R js $DEPLOYPATH
+    - /bin/rsync -R PruebaNoUsuarios $DEPLOYPATH
+    - /bin/rsync -R Identidad-Virtual $DEPLOYPATH
+    - /bin/rsync about-us.html $DEPLOYPATH
+    - /bin/rsync blog-details.html $DEPLOYPATH
+    - /bin/rsync products.html $DEPLOYPATH
+    - /bin/rsync product-details.html $DEPLOYPATH
+    - /bin/rsync checkout.html $DEPLOYPATH
+    - /bin/rsync contact.html $DEPLOYPATH
+    - /bin/rsync licese.txt $DEPLOYPATH
+    - /bin/rsync special-offer.html $DEPLOYPATH
+    - /bin/rsync terms.html $DEPLOYPATH
+    - /bin/rsync testimonials.html $DEPLOYPATH
+    - /bin/rsync product-details.php $DEPLOYPATH
+    - /bin/rsync product-detail-prueba.php $DEPLOYPATH
