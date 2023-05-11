@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost','root', '', 'identidad_virtual');
+$conn = mysqli_connect('localhost','maidenwa_user', 'Bluey050705', 'maidenwa_identidad_virtual');
 
 // Verifica si la conexión es exitosa
 if (!$conn) {

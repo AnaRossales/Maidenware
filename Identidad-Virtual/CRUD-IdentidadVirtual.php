@@ -98,7 +98,7 @@ function validarEspacios(event) {
                         <div data-wrapper-react="true">
                             <?php
 try {
-    $conn = mysqli_connect('localhost', 'root', '', 'identidad_virtual');
+    $conn = mysqli_connect('localhost','maidenwa_user', 'Bluey050705', 'maidenwa_identidad_virtual');
     if (!$conn) {
         throw new Exception("No se pudo conectar a la base de datos, contacte al responsable de la página");
     }

@@ -13,8 +13,8 @@
     $item->quantity = 1;
     $item->unit_price = 30;
     $preference->items = array($item);
-    $preference->setbackUrls = array(
-      "success" => "https://www.maidenware.com.mx/log-in",
+    $preference->Back_urls = array(
+      "success" => "https://www.maidenware.com.mx/sign-up",
       "failure" => "http://www.tu-sitio/failure",
       "pending" => "http://www.tu-sitio/pending"
   );
@@ -22,7 +22,7 @@
     ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <link rel="stylesheet" href="assets/css/index.css">
   <head>
 
@@ -34,7 +34,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title></title>
+    <title>Identidad Virtual</title>
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -167,25 +167,6 @@
               <br> 
 
               <div class="row">
-                <div class="col-sm-4">
-                  <label class="control-label">Extra 1</label>
-                  <div class="form-group">
-                    <select class="form-control">
-                      <option value="0">18 gears</option>
-                      <option value="1">21 gears</option>
-                      <option value="2">27 gears</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-sm-8">
-                  <label class="control-label">Quantity</label>
-
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="1">
-                      </div>
-                    </div>
 
                     <style>
                         .form-hide{
@@ -209,7 +190,9 @@
         data-preference-id="<?php echo $preference->id; ?>">
         </script>
     </form>
-    <style> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } .btcpay-form option { color: #000; background: rgba(0,0,0,.1); } .btcpay-input-price { -moz-appearance: textfield; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; }.btcpay-input-price::-webkit-outer-spin-button, .btcpay-input-price::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } </style>
+    
+    <div class="col-sm-6">
+      <style> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } .btcpay-form option { color: #000; background: rgba(0,0,0,.1); } .btcpay-input-price { -moz-appearance: textfield; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; }.btcpay-input-price::-webkit-outer-spin-button, .btcpay-input-price::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } </style>
 <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
   <input type="hidden" name="storeId" value="CJgq39kg6FH14gk3UVmxx9Bk5wmjTh8fDDxpXAgzw5J8" />
   <input type="hidden" name="checkoutDesc" value="Identidad Virtual" />
@@ -218,6 +201,7 @@
   <input type="hidden" name="currency" value="BTC" />
   <input type="image" class="submit" name="submit" src="https://maidenware1.s3.us-east-2.amazonaws.com/Bitcoin.png" style="width:209px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
 </form>
+</div>
                     </div>
                       </div>
                       

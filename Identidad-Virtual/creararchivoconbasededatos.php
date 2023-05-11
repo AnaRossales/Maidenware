@@ -9,7 +9,7 @@ if (file_exists($nombre_archivo. '.php')) {
     $nameitself = basename($_SERVER["PHP_SELF"], ".php");
     $nombre_archivo1 = $nombre_archivo . ".php";
     unlink($nombre_archivo1);
-    $conn = mysqli_connect('localhost','root', '', 'identidad_virtual');
+    $conn = mysqli_connect('localhost','maidenwa_user', 'Bluey050705', 'maidenwa_identidad_virtual');
     $sql = "SELECT * FROM login WHERE nombre_de_usuario ='".$nombre_archivo."';";
     $result_identidad_virtual = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result_identidad_virtual);

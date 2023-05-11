@@ -10,7 +10,7 @@ $contrasena = $_POST['contrasena'];
 
 try {
     // Conexión a la base de datos
-    $conn = mysqli_connect('localhost', 'root', '', 'identidad_virtual');
+    $conn = mysqli_connect('localhost','maidenwa_user', 'Bluey050705', 'maidenwa_identidad_virtual');
 
     // Comprobación de errores en la conexión
     if (!$conn) {
