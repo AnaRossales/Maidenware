@@ -1,6 +1,7 @@
 <?php
 // Conectar a la base de datos
-$conexion = mysqli_connect("localhost", "root", "", "identidad_virtual");
+$conexion = mysqli_connect('localhost','maidenwa_user', 'Bluey050705', 'maidenwa_identidad_virtual');
+
 $oui = $_POST['oui'];
 if ($oui != 1) {
     header('Location: http://maidenware.com.mx');
