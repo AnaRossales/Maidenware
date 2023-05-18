@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="es-ES" class="supernova">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+
+    <title>Formulario de admision </title>
+
+    <link href="https://cdn01.jotfor.ms/static/formCss.css?3.3.39623" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/nova.css?3.3.39623" />
+    <link type="text/css" rel="stylesheet" href="CSS/Estilos.css">
+
+</head>
+<body>
+    <form class="jotform-form" action="verusuario.php" method="post">
+        <input type="hidden" name="IDEMPRESA" value="Empresa aqui" />
+
+        <div role="main" class="form-all">
+
+<!-- Imagen de Maidenware -->
+
+    <div style="padding: 20px; float: left;">
+        <img src="CSS/Imagen/Logo_fondo_blanco.png" width="200" height="100">
+    </div>
+
+<!-- Imagen de tu Empresa -->
+
+    <div style="padding: 20px; float: right;">
+        <img src="CSS/Imagen/Tu empresa.png" width="200" height="100">
+    </div>
+
+<!-- Inicio del formulario -->
+            <ul class="form-section page-section">
+                <li id="cid_89" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-default">
+                        <div class="header-text httal htvam">
+                            <h2 id="header_89" class="form-header" data-component="header">Formulario datos medicos</h2>
+                        </div>
+                    </div>
+                </li>
+                <li id="cid_101" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httal htvam">
+                        <h3 id="header_101" class="form-header" data-component="header">Informacion personal</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_fullname" id="Nombre">
+                    <label class="form-label form-label-top" id="Nombre" for="Nombre"> Nombre </label>
+                    <div id="cid_3" class="form-input-wide">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                            <input type="text" id="Nombre" name="Nombre" class="form-textbox" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">Nombre</label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                            <input type="text" id="Apellido" name="Apellido" class="form-textbox" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" />
+                            <label class="form-sub-label" for="Apellido" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Apellido Paterno</label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                                <input type="text" id="Apellido" name="Apellido2" class="form-textbox" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" />
+                                <label class="form-sub-label" for="Apellido2" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Apellido Materno</label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_7" data-compound-hint=",">
+                    <label class="form-label form-label-top" id="label_7" for="input_7_area">Número de teléfono</label>
+                    <div id="cid_7" class="form-input-wide">
+                        <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
+                            <input type="tel" id="Tel_Persona" name="Tel_Persona" class="form-textbox" data-defaultvalue="" autoComplete="section-input_7 tel-local" value="" data-component="phone" aria-labelledby="label_7 sublabel_7_phone" />
+                            <label class="form-sub-label" for="input_7_phone" id="sublabel_7_phone" style="min-height:13px" aria-hidden="false">Número de teléfono</label>
+                        </span>
+                    </div>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-2" data-type="control_datetime" id="id_8">
+                    <label class="form-label form-label-top" id="label_8" for="lite_mode_8"> Fecha de nacimiento </label>
+                    <div id="cid_8" class="form-input-wide">
+                        <div data-wrapper-react="true">
+                            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top">
+                                <input type="tel" class="form-textbox validate[limitDate]" id="Mes_Nac" name="Mes_Nac" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_8 sublabel_8_month" />
+                                <span class="date-separate" aria-hidden="true"> -</span>
+                                <label class="form-sub-label" for="month_8" id="Mes_Nac" style="min-height:13px" aria-hidden="false">Mes</label></span>
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                <input type="tel" class="form-textbox validate[limitDate]" id="Dia_Nac" name="Dia_Nac" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_8 sublabel_8_day" />
+                                <span class="date-separate" aria-hidden="true"> -</span>
+                                <label class="form-sub-label" for="day_8" id="Dia_Nac" style="min-height:13px" aria-hidden="false">Día</label></span>
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                <input type="tel" class="form-textbox validate[limitDate]" id="Año_Nac" name="Año_Nac" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_8 sublabel_8_year" />
+                                <label class="form-sub-label" for="year_8" id="sublabel_8_year" style="min-height:13px" aria-hidden="false">Año</label></span></div>
+                                <span class="form-sub-label-container" style="vertical-align:top">
+                                <input type="date" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_8" name="Fecha_Nac" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="mm-dd-yyyy" autoComplete="off" aria-labelledby="label_8 sublabel_8_litemode" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" />
+<!-- Aqui icono calendario <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_8_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" /> -->        
+                                <label class="form-sub-label" for="lite_mode_8" id="sublabel_8_litemode" style="min-height:13px" aria-hidden="false">Fecha</label></span>     
+                        </div>
+                    </div>
+                </li>
+
+                <li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_7" data-compound-hint=",">
+                    <label class="form-label form-label-top" id="label_7" for="input_7_area">Número ID de Empresa</label>
+                    <div id="cid_7" class="form-input-wide">
+                        <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top">
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="tel" id="ID_Empresa" name="ID_Empresa" class="form-textbox" data-defaultvalue="" autoComplete="section-input_7 tel-local" value="" data-component="phone" aria-labelledby="label_7 sublabel_7_phone" />
+                            <label class="form-sub-label" for="input_7_phone" id="sublabel_7_phone" style="min-height:13px" aria-hidden="false">ID de Empresa</label>
+                        </span>
+                    </div>
+                    </div>
+                </li>
+
+                <li id="cid_101" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httal htvam">
+                        <h3 id="header_101" class="form-header" data-component="header">Informacion de Contacto de emergencia</h3>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="form-line form-line-column form-col-1" data-type="control_fullname" id="Nombre">
+                    <label class="form-label form-label-top" id="Nombre" for="Nombre"> Nombre de Contacto</label>
+                    <div id="cid_3" class="form-input-wide">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                            <input type="text" id="Nombre_Cont_Emergencia" name="Nombre_Cont_Emergencia" class="form-textbox" size="10" data-component="first" aria-labelledby="label_3 sublabel_3_first" />
+                            <label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">Nombre</label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_phone" id="id_7" data-compound-hint=",">
+                    <label class="form-label form-label-top" id="label_7" for="input_7_area">Número de teléfono de Contacto</label>
+                    <div id="cid_7" class="form-input-wide">
+                        <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone">
+                            <input type="tel" id="Tel_Contacto" name="Tel_Contacto" class="form-textbox" data-defaultvalue="" autoComplete="section-input_7 tel-local" value="" data-component="phone" aria-labelledby="label_7 sublabel_7_phone" />
+                            <label class="form-sub-label" for="input_7_phone" id="sublabel_7_phone" style="min-height:13px" aria-hidden="false">Número de teléfono de contacto</label>
+                        </span>
+                    </div>
+                    </div>
+                </li>
+
+                <li id="cid_101" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httal htvam">
+                        <h3 id="header_101" class="form-header" data-component="header">Datos genereales</h3>
+                        </div>
+                    </div>
+                </li>
+
+<!-- Tipo Sanguineo  <(listo) -->    
+            <li class="form-line jf-required" data-type="control_checkbox" id="id_80">
+                <label class="form-label form-label-left" id="Tipo_Sangretxt" for="input_80"> Grupo sanguineo <span class="form-required">*</span> </label><br>
+                    <div id="cid_80" class="form-input-wide"><br>
+                        <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="Tipo_Sangre" data-component="radio">
+                            <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="A_positivo" name="Tipo_Sangre" value="A positiva" required=""/>
+                            <label id="label_A_positivo" for="A_positivo">A positiva</label></span>                        
+                            <span class="form-radio-item" ><span class="dragger-item"></span>
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="A_negativo" name="Tipo_Sangre" value="A negativa" required=""/>
+                            <label id="label_input_80_1" for="input_80_1">A negativa</label></span>             
+                            <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="B_positivo" name="Tipo_Sangre" value="B positivo" required=""/>      
+                            <label id="label_input_80_2" for="input_80_2">B positivo</label></span>
+                            <span class="form-radio-item" ><span class="dragger-item"></span>                                  
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="B_negativo" name="Tipo_Sangre" value="B negativo" required=""/>      
+                            <label id="label_input_80_3" for="input_80_3">B negativo</label></span>
+                            <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>          
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="O_positivo" name="Tipo_Sangre" value="O positivo" required=""/>      
+                            <label id="label_input_80_4" for="input_80_4">O positivo</label></span>      
+                            <span class="form-radio-item" ><span class="dragger-item"></span>       
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="O_negativo" name="Tipo_Sangre" value="O negativo" required=""/>      
+                            <label id="label_input_80_5" for="input_80_5">O negativo</label></span>       
+                            <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="AB_positivo" name="Tipo_Sangre" value="AB positivo" required=""/>      
+                            <label id="label_input_80_6" for="input_80_6">AB positivo</label></span>        
+                            <span class="form-radio-item" ><span class="dragger-item"></span>      
+                            <input type="radio" aria-describedby="Tipo_Sangre" class="form-radio validate[required]" id="AB_negativo" name="Tipo_Sangre" value="AB negativo" required=""/>      
+                            <label id="label_input_80_7" for="input_80_7">AB negativo</label></span>                                         
+                        </div>                                                   
+                    </div>
+                </li>
+<!-- Factor RH (listo)-->
+        <li class="form-line form-line-column form-col-2 jf-required" data-type="control_checkbox" id="id_15">
+                <label class="form-label form-label-top" id="label_15" for="input_15"> Factor RH<span class="form-required">*</span></label>
+                    <div id="cid_15" class="form-input-wide jf-required">
+                        <div class="form-single-column" role="group" aria-labelledby="label_15" data-component="radio">
+                            <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="radio" aria-describedby="label_15" class="form-radio validate[required]" id="input_15_0" name="q15_factorRh[]" value="RH+" required="">                                    
+                            <label id="label_input_15_0" for="input_15_0">RH+</label></span>
+                            <span class="form-radio-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="radio" aria-describedby="label_15" class="form-radio validate[required]" id="input_15_1" name="q15_factorRh[]" value="RH-" required="">                                   
+                            <label id="label_input_15_1" for="input_15_1">RH-</label></span>
+                        </div>
+                    </div>
+                </li>
+<!-- Historial del pasiente (parcialmente listo)-------------------------------------------------------------------------------------------------------------------------->
+                <li id="cid_96" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-default">
+                        <div class="header-text httal htvam">
+                        <h2 id="header_96" class="form-header" data-component="header">Historia del paciente</h2>
+                        </div>
+                    </div>
+                </li>
+                
+            <li class="form-line" data-type="control_checkbox" id="id_75">
+                <label class="form-label form-label-left form-label-auto" id="label_75" for="input_75"> Indique si tiene alguna de las siguientes condiciones </label>                       
+                    <div id="cid_75" class="form-input">
+                        <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_75" data-component="checkbox"></div>
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_0" name="Estres" value="Estres" />
+                            <label id="label_input_75_0" for="input_75_0">Estres</label></span>
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_1" name="Asma" value="Asma" />
+                            <label id="label_input_75_1" for="input_75_1">Asma</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_2" name="Depresion/Ansiedad" value="Depresion/Ansiedad" />      
+                            <label id="label_input_75_2" for="input_75_2">Depresion/Ansiedad</label></span>    
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>      
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_3" name="Marcapasos/Problemas" value="Marcapasos/Problemas cardiacos" />      
+                            <label id="label_input_75_3" for="input_75_3">Marcapasos/Problemas cardiacos</label></span>      
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>   
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_4" name="Presion_Arterial" value="Presion Arterial alta" />      
+                            <label id="label_input_75_4" for="input_75_4">Presion Arterial alta</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_5" name="histerectomia" value="Se realizo histerectomia" />      
+                            <label id="label_input_75_5" for="input_75_5">Se realizo histerectomia</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_6" name="Seborrea" value="Seborrea" />      
+                            <label id="label_input_75_6" for="input_75_6">Seborrea</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>    
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_7" name="Psoriasis" value="Psoriasis" />      
+                            <label id="label_input_75_7" for="input_75_7">Psoriasis</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>        
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_8" name="Eccema" value="Eccema" />  
+                            <label id="label_input_75_8" for="input_75_8">Eccema</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_9" name="Objetos_Metalicos" value="Clavos o placas metalicas" />      
+                            <label id="label_input_75_9" for="input_75_9">Clavos o placas metalicas</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_10" name="Tras_Inmunologicos" value="Trastornos inmunologicos" />      
+                            <label id="label_input_75_10" for="input_75_10">Trastornos inmunologicos</label></span>      
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>   
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_11" name="sinusitis" value="Problemas de sinusitis" />      
+                            <label id="label_input_75_11"for="input_75_11">Problemas de sinusitis</label></span>
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_12" name="Herpes" value="Herpes" />
+                            <label id="label_input_75_12" for="input_75_12">Herpes</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_13" name="Herpes_lab/boq" value="Herpes labial/boqueras" />      
+                            <label id="label_input_75_13" for="input_75_13">Herpes labial/boqueras</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_14" name="Epilepsia" value="Epilepsia" />      
+                            <label id="label_input_75_14" for="input_75_14">Epilepsia</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>   
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_15" name="Urin/Ren" value="Problemas urinarios o renales" />      
+                            <label id="label_input_75_15" for="input_75_15">Problemas urinarios o renales</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_16" name="lupus" value="lupus" />      
+                            <label id="label_input_75_16" for="input_75_16">lupus</label></span>        
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_17" name="Hepatitis" value="Hepatitis" />      
+                            <label id="label_input_75_17" for="input_75_17">Hepatitis</label></span>   
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_18" name="Enf_Piel" value="otras enfermedades de la piel" />      
+                            <label id="label_input_75_18" for="input_75_18">otras enfermedades de la piel</label></span>      
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_75" class="form-checkbox" id="input_75_19" name="Dolor_Cabeza" value="Dolores de cabeza cronicos" />
+                            <label id="label_input_75_19" for="input_75_19">Dolores de cabeza cronicos</label></span>     
+                            <span class="form-checkbox-item" style="clear:left">
+                            <input type="checkbox" class="form-checkbox-other form-checkbox" name="Otro" id="other_75" value="Otro" tabindex="0" aria-label="Otro" />     
+                            <label id="label_other_75" style="text-indent:0" for="other_75"> </label>
+                            <input type="text" class="form-checkbox-other-input form-textbox" name="Otro2" data-otherhint="Otro" size="15" id="input_75" placeholder="Otro" />               
+                                <br>
+                            </span>
+                        </div>
+
+                        <!--Inmunizacion aqui(Ya esta acabado)---------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+            <li class="form-line jf-required" data-type="control_checkbox" id="id_23">
+                <label class="form-label form-label-top" id="label_23" for="input_23"> Inmunización<span class="form-required">*</span> </label>  
+                    <div id="cid_23" class="form-input-wide jf-required">
+                        <div class="form-multiple-column" data-columncount="3" role="group" aria-labelledby="label_23" data-component="checkbox">
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_23"class="form-checkbox validate[required]" id="input_23_0" name="Pentavalente(1)"value="Pentavalente (1)" >
+                            <label id="label_input_23_0" for="input_23_0">Pentavalente (1)</label></span>
+                            <span class="form-checkbox-item"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_1" name="BCG" value="BCG" >
+                            <label id="label_input_23_1" for="input_23_1">BCG</label></span>
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_2" name="Pentavalente(2)" value="Pentavalente (2)" >
+                            <label id="label_input_23_2" for="input_23_2">Pentavalente (2)</label></span>
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_3" name="HepatitisB" value="Hepatitis B" >
+                            <label id="label_input_23_3" for="input_23_3">Hepatitis B</label></span>
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_4" name="Pentavalente(3)" value="Pentavalente (3)" >
+                            <label id="label_input_23_4" for="input_23_4">Pentavalente (3)</label></span>
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_5" name="IPV" value="IPV" >
+                            <label id="label_input_23_5" for="input_23_5">IPV</label></span>      
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>      
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_6" name="OPV(1)" value="OPV (1)" >       
+                            <label id="label_input_23_6" for="input_23_6">OPV (1)</label></span>   
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_7" name="SRP" value="SRP" >       
+                            <label id="label_input_23_7" for="input_23_7">SRP</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_8" name="OPV(2)" value="OPV (2)" >     
+                            <label id="label_input_23_8" for="input_23_8">OPV (2)</label></span>       
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>   
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_9" name="Varicela" value="Varicela" >      
+                            <label id="label_input_23_9" for="input_23_9">Varicela</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_10" name="OPV(3)" value="OPV (3)" >      
+                            <label id="label_input_23_10" for="input_23_10">OPV (3)</label></span>        
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_11" name="Fiebre_Amarilla" value="Fiebre Amarilla" >      
+                            <label id="label_input_23_11" for="input_23_11">Fiebre Amarilla</label></span>
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_12" name="VPH(1)" value="VPH (1)" >      
+                            <label id="label_input_23_12" for="input_23_12">VPH (1)</label></span>   
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_13" name="DPT" value="DPT" >      
+                            <label id="label_input_23_13" for="input_23_13">DPT</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_14" name="VPH(2)" value="VPH (2)" >      
+                            <label id="label_input_23_14" for="input_23_14">VPH (2)</label></span>       
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_15" name="dT" value="dT" >      
+                            <label id="label_input_23_15" for="input_23_15">dT</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_16" name="Hepatitis_A(1)" value="Hepatitis A (1)" >     
+                            <label id="label_input_23_16" for="input_23_16">Hepatitis A (1)</label></span>   
+                            <span class="form-checkbox-item" ><span class="dragger-item"></span>       
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_17" name="Influenza" value="Influenza" >      
+                            <label id="label_input_23_17" for="input_23_17">Influenza</label></span>       
+                            <span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span>   
+                            <input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_18" name="Hepatitis_A(2)" value="Hepatitis A (2)" >     
+                            <label id="label_input_23_18" for="input_23_18">Hepatitis A (2)</label></span>       
+                            <span class="form-checkbox-item" >  
+                            <input type="radio" class="form-checkbox-other form-checkbox validate[required]" name="Imn_Otro" id="other_23" value="Otro" tabindex="0" aria-label="Otro">   
+                            <label id="label_other_23" style="text-indent:0" for="other_23">&nbsp;</label>       
+                            <input type="text" class="form-checkbox-other-input form-textbox" name="Otro2" data-otherhint="Otro" size="15" id="input_23" placeholder="Otro">   
+                            </span>        
+                        </div>        
+                    </div>
+                </li>
+            <li class="form-line jf-required" data-type="control_textarea" id="id_11">
+                <label class="form-label form-label-top form-label-auto" id="label_11" for="input_11"> Antecedentes Prenatales<span class="form-required">*</span> </label>
+                <div id="cid_11" class="form-input-wide jf-required"> <span class="form-sub-label-container" style="vertical-align:top"></span>
+                        <div class="widearea-wrapper">
+                            <div class="widearea-wrapper">
+                            <textarea id="input_11" class="form-textarea validate[required]" name="q11_antecedentesPrenatales" cols="60" rows="6" style="overflow-y:hidden" data-widearea="enable" data-component="textarea" required="" aria-labelledby="label_11 sublabel_input_11"></textarea>
+                            <div class="widearea-icons"><a class="widearea-icon fullscreen" title="WideArea Mode" href="javascript:void(0);"></a></div>            
+                        </div>
+                        <div class="widearea-icons"><a class="widearea-icon fullscreen" title="WideArea Mode" href="javascript:void(0);"></a></div>                                  
+                        </div>
+                        <label class="form-sub-label" for="input_11" id="sublabel_input_11" style="min-height:13px" aria-hidden="false">Redactar la información en el cuadro de texto</label>                                                    
+                    </span> 
+                </div>
+            </li>
+                <li class="form-line jf-required" data-type="control_textarea" id="id_12">
+                <label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> Antecedentes Natales<span class="form-required">*</span> </label>                    
+                <div id="cid_12" class="form-input-wide jf-required"> <span class="form-sub-label-container" style="vertical-align:top"></span>
+                        <div class="widearea-wrapper">
+                            <div class="widearea-wrapper">
+                            <textarea id="input_12" class="form-textarea validate[required]"name="q12_antecedentesNatales" cols="60" rows="6" style="overflow-y:hidden" data-widearea="enable" data-component="textarea" required="" aria-labelledby="label_12 sublabel_input_12"></textarea>                                  
+                            <div class="widearea-icons"><a class="widearea-icon fullscreen" title="WideArea Mode" href="javascript:void(0);"></a></div>                                      
+                            </div>
+                            <div class="widearea-icons"><a class="widearea-icon fullscreen" title="WideArea Mode"href="javascript:void(0);"></a></div></div>                                  
+                        <label class="form-sub-label" for="input_12" id="sublabel_input_12" style="min-height:13px" aria-hidden="false">Redactar la información en el cuadro de texto</label>  
+                    </span> 
+                </div>
+            </li>
+                <li id="cid_95" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-default">
+                    <div class="header-text httal htvam">
+                    <h2 id="header_95" class="form-header" data-component="header">Consentimiento Informado</h2>
+                    </div>
+                    </div>
+                </li>
+            <li class="form-line" data-type="control_text" id="id_88">
+                <div id="cid_88" class="form-input-wide">
+                    <div id="text_88" class="form-html" data-component="text" tabindex="0">
+                    <p style="text-align:justify;"><em><span style="font-family:arial, helvetica, sans-serif;font-size:12pt;"></spanstyle>Entiendo que los servicios que se ofrecen no reemplazan la atencion medica y que toda la informacion suministrada es solo con fines educativos y no de naturaleza prescriptiva ni un diagnostico. Entiendo que la informacion de este documento es para ayudar al tecnico a brindar un mejor servicio y es completamente confidencial.</span></em></p>
+                    </div>
+                    </div>
+                </li>
+            <li class="form-line" data-type="control_button" id="id_102">
+                <div id="cid_102" class="form-input-wide">
+                    <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"></div>
+                    <button id="input_102" style="display:none !important" type="button" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Enviar</button>      
+                    <button type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField  useJotformSign-button useJotformSign " data-component="button" data-content="">Enviar</button>      
+                    </div>
+                </div>
+                </li>
+            </div>
+            </li>
+        </ul>
+        </div>
+    
+</form>
+</body>
+</html>
