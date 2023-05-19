@@ -518,7 +518,7 @@ try {
                     <br><br>
                     <div style="display: flex; justify-content: center;">
                     <div class="wrap"><br>
-                    <input type="submit" class="btn-outline-primary" value="Probar">
+                    <input type="submit" class="btn-outline-primary" value="Visualizar">
 
                     <!--Aqui falta -->
 

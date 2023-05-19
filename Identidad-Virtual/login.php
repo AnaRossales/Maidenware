@@ -1,10 +1,9 @@
 <?php
 // Conectar a la base de datos
 $conexion = mysqli_connect('localhost','maidenwa_user', 'Bluey050705', 'maidenwa_identidad_virtual');
-
 $oui = $_POST['oui'];
 if ($oui != 1) {
-    header('Location: http://maidenware.com.mx');
+    header('Location: https://maidenware.com.mx');
 }
 $nombreusuario = $_POST['nombreusuario'];
 $contrasena = $_POST['contrasena'];
@@ -37,9 +36,6 @@ try {
             setcookie("ID_Usuario", $id, time() + 3000, "/");
             setcookie("nombreusuario", $nombreusuario, time() + 3000, "/");
             header('Location: CRUD-IdentidadVirtual.php');
-        } else {
-            // Usuario y/o contraseña incorrectos
-            echo "Usuario y/o contraseña incorrectos";
         }
     }
 
