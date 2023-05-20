@@ -15,7 +15,7 @@
     $preference->items = array($item);
     $preference->Back_urls = array(
       "success" => "https://www.maidenware.com.mx/sign-up",
-      "failure" => "http://www.tu-sitio/failure",
+      "failure" => "http://www.maidenware.com.mx",
       "pending" => "http://www.tu-sitio/pending"
   );
   $preference->save();
@@ -63,26 +63,25 @@
 
     <!-- Header -->
     <header class="navigation bg-tertiary">
+  <!--<div class="custom-loader"></div>-->
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
-    <a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="index.html">
 				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="https://maidenware1.s3.us-east-2.amazonaws.com/MAIDENWARE.png" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-					<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+					<li class="nav-item"> <a class="nav-link" href="www.maidenware.com.mx">Inicio</a>
 					</li>
-					<li class="nav-item "> <a class="nav-link" href="about.html">About</a>
+					<li class="nav-item "> <a class="nav-link" href="https://info.maidenware.com.mx/contacto/">Acerca de</a>
 					</li>
-					<li class="nav-item "> <a class="nav-link" href="how-it-works.html">How It Works</a>
+					<li class="nav-item "> <a class="nav-link" href="https://info.maidenware.com.mx/">¿Cómo funciona?</a>
 					</li>
-					<li class="nav-item "> <a class="nav-link" href="services.html">Services</a>
+					<li class="nav-item "> <a class="nav-link" href="https://info.maidenware.com.mx/contacto/">Contacto</a>
 					</li>
-					<li class="nav-item "> <a class="nav-link" href="contact.html">Contact</a>
-					</li>
-					<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+					<!--<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item " href="blog.html">Blog</a>
 							</li>
@@ -99,17 +98,16 @@
 							<li><a class="dropdown-item " href="privacy-policy.html">Privacy &amp; Policy</a>
 							</li>
 						</ul>
-					</li>
+					</li>-->
 				</ul>
-				<!-- account btn  <a href="#!" class="btn btn-outline-primary">Log In</a>-->
-				<!-- account btn  <a href="#!" class="btn btn-primary ms-2 ms-lg-3">Sign Up</a>-->
+				<!-- account btn --> <a href="Identidad-Virtual\log-in.html" class="btn btn-outline-primary">Log In</a>
 			</div>
 		</div>
 	</nav>
 </header>
 
     <!-- Page Content -->
-    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/heading-6-1920x500.jpg);">
+    <div class="page-heading about-heading header-text" style="background-image: url(https://maidenware1.s3.us-east-2.amazonaws.com/rafagodgod.png);">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -140,6 +138,12 @@
               <div class="col-md-4 col-xs-12">
                 <div>
                   <img src="https://maidenware1.s3.us-east-2.amazonaws.com/mercado_pago_ofertas.webp" alt="" class="img-fluid">
+                </div>
+                <br>
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <div>
+                  <img src="https://maidenware1.s3.us-east-2.amazonaws.com/tarjeta3.png" alt="" class="img-fluid">
                 </div>
                 <br>
               </div>
@@ -189,7 +193,7 @@
         </script>
     </form>
     
-    <div class="col-sm-6">
+    <div style="margin-left:-20px;" class="col-sm-6">
       <style> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } .btcpay-form option { color: #000; background: rgba(0,0,0,.1); } .btcpay-input-price { -moz-appearance: textfield; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; }.btcpay-input-price::-webkit-outer-spin-button, .btcpay-input-price::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } </style>
 <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
   <input type="hidden" name="storeId" value="CJgq39kg6FH14gk3UVmxx9Bk5wmjTh8fDDxpXAgzw5J8" />
@@ -218,15 +222,15 @@
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>Productos Similares</h2>
-              <a href="products.html">view more <i class="fa fa-angle-right"></i></a>
+              <h2>Conoce más</h2>
+              <a href="products.html">ver más <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="product-item">
               <a href="product-details.html"><img src="assets/images/product-1-370x270.jpg" alt=""></a>
               <div class="down-content">
-                <a href="product-details.html"><h4>Omega bicycle</h4></a>
+                <a href="product-details.html"><h4>Que es nfc?</h4></a>
                 <h6><small><del>$999.00 </del></small> $779.00</h6>
               </div>
             </div>
@@ -305,9 +309,9 @@
 				<div style="background-color: #F4F4F4; padding: 35px;">
 					<h5 class="mb-4 text-primary font-secondary">Newsletter</h5>
 					<div class="pe-0 pe-xl-5">
-						<form action="#!" method="post" name="mc-embedded-subscribe-form" target="_blank">
+						<form action="newsletter.php" method="post" name="mc-embedded-subscribe-form" target="_blank">
 							<div class="input-group mb-3">
-								<input type="text" class="form-control shadow-none bg-white border-end-0" placeholder="Email address"> <span class="input-group-text border-0 p-0">
+								<input type="text" name="correo" class="form-control shadow-none bg-white border-end-0" placeholder="Email"> <span class="input-group-text border-0 p-0">
                     <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
                       aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
                   </span>

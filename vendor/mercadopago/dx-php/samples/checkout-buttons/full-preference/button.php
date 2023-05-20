@@ -35,6 +35,6 @@
 
     # Return the HTML code for button
 
-    echo "<a href='$preference->sandbox_init_point'> Pagar </a>";
+    echo "<a href='$preference->sandbox_init_point'> Pagar Con Mercado Pago </a>";
 
 ?>
