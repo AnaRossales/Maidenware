@@ -54,13 +54,18 @@ if (!$cookieEncontrada) {
             <li>Estres</li>
             <li>Amsiedad</li> 
         </ul>
-        <h4>&nbsp; &nbsp; Inmunización</h4>
+        <h4>&nbsp; &nbsp; Inmunización:</h4>
         <ul class="Padecimientos">
             <li>Influenza</li>           
         </ul>
-        <h4>&nbsp; &nbsp;Antecedentes Prenatales</h4>
+        <h4>&nbsp; &nbsp; Alergias:</h4>
+        <ul class="Padecimientos">
+            <li>Polvo</li>
+            <li>Mariscos</li> 
+        </ul>
+        <h4>&nbsp; &nbsp;Antecedentes Prenatales:</h4>
         <p>Ninguno </p>
-        <h4>&nbsp; &nbsp;Antecedentes Natales</h4>
+        <h4>&nbsp; &nbsp;Antecedentes Natales:</h4>
         <p> Problemas fisicos, pies planos flexibles</p>
         <h4>&nbsp; &nbsp;Seguro Médico</h4>
         <p>IMSS Hospital de Zona 15</p>
