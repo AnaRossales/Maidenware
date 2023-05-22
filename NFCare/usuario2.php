@@ -23,7 +23,7 @@ if ('2064558' === $idOculto) {
 
 // Si no se encontró ninguna cookie válida, redirige a otra página
 if (!$cookieEncontrada) {
-    header('Location: https://www.youtube.com/watch?v=mCdA4bJAGGk');
+    header('Location: https://www.youtube.com/watch?v=GQHIzuqD3-4');
     exit();
 }
 ?>
