@@ -371,6 +371,16 @@
               </div>
             </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="https://info.maidenware.com.mx/buy-bitcoin/"><img src="" alt=""></a>
+              <div class="down-content">
+                <a href="https://info.maidenware.com.mx/buy-bitcoin/"><h4>¿Como comprar con Bitcoin?</h4>
+                <h6>Criptograficamente facil...</h6></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -416,7 +426,11 @@
 					<div class="pe-0 pe-xl-5">
 						<form action="#!" method="post" name="mc-embedded-subscribe-form" target="_blank">
 							<div class="input-group mb-3">
+<<<<<<< HEAD
 								<input type="text" class="form-control shadow-none bg-white border-end-0" placeholder="Email address"> <span class="input-group-text border-0 p-0">
+=======
+								<input type="email" name="email" class="form-control shadow-none bg-white border-end-0" placeholder="Email"> <span class="input-group-text border-0 p-0">
+>>>>>>> a7ea7f4043c91bed875bb3bedf6b21858c2c0736
                     <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
                       aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
                   </span>
