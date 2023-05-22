@@ -223,35 +223,34 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Conoce más</h2>
-              <a href="products.html">ver más <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
           <div class="col-md-4">
             <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-1-370x270.jpg" alt=""></a>
+              <a href="https://info.maidenware.com.mx/que-es-nfc/"><img src="" alt=""></a>
               <div class="down-content">
-                <a href="product-details.html"><h4>Que es nfc?</h4></a>
-                <h6><small><del>$999.00 </del></small> $779.00</h6>
+                <a href="https://info.maidenware.com.mx/que-es-nfc/"><h4>¿Que es nfc?</h4>
+                <h6>El futuro de la tecnología...</h6></a>
               </div>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-2-370x270.jpg" alt=""></a>
+              <a href="https://info.maidenware.com.mx/buy-identidad-virtual/"><img src="" alt=""></a>
               <div class="down-content">
-                <a href="product-details.html"><h4>Nike Revolution 5 Shoes</h4></a>
-                <h6><small><del>$99.00</del></small>  $79.00</h6>
+                <a href="https://info.maidenware.com.mx/buy-identidad-virtual/"><h4>¿Como comprar?</h4>
+                <h6>Super facil...</h6></a>
               </div>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="product-details.html"><img src="assets/images/product-3-370x270.jpg" alt=""></a>
+              <a href="https://info.maidenware.com.mx/include-identidad-virtual/"><img src="" alt="">
               <div class="down-content">
-                <a href="product-details.html"><h4>Treadmill Orion Sprint</h4></a>
-                <h6><small><del>$1999.00</del></small>   $1779.00</h6>
+                <a href="https://info.maidenware.com.mx/include-identidad-virtual/"><h4>¿Que incluye mi compra?</h4>
+                <h6>La puerta al futuro...</h6></a>
               </div>
             </div>
           </div>
