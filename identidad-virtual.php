@@ -11,7 +11,7 @@
     $item = new MercadoPago\Item();
     $item->title = 'Tarjeta';
     $item->quantity = 1;
-    $item->unit_price = 30;
+    $item->unit_price = 400;
     $preference->items = array($item);
     $preference->Back_urls = array(
       "success" => "https://www.maidenware.com.mx/Identidad-Virtual/sign-up.html",
@@ -73,7 +73,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-					<li class="nav-item"> <a class="nav-link" href="www.maidenware.com.mx">Inicio</a>
+					<li class="nav-item"> <a class="nav-link" href="index.html">Inicio</a>
 					</li>
 					<li class="nav-item "> <a class="nav-link" href="https://info.maidenware.com.mx/contacto/">Acerca de</a>
 					</li>
@@ -100,6 +100,11 @@
 						</ul>
 					</li>-->
 				</ul>
+        <style>
+          btn-outline-primary:hover{
+            background:#8EA1FF
+          }
+        </style>
 				<!-- account btn --> <a href="Identidad-Virtual\log-in.html" class="btn btn-outline-primary">Log In</a>
 			</div>
 		</div>
@@ -112,8 +117,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>NFC</h4>
-              <h2>Identidad-Virtual</h2>
+              <h4 style="color:#007bff">NFC</h4>
+              <h2>Identidad Virtual</h2>
             </div>
           </div>
         </div>
@@ -143,7 +148,7 @@
               </div>
               <div class="col-md-4 col-xs-12">
                 <div>
-                  <img src="https://maidenware1.s3.us-east-2.amazonaws.com/tarjeta3.png" alt="" class="img-fluid">
+                  <!--<img src="https://maidenware1.s3.us-east-2.amazonaws.com/tarjeta3.png" alt="" class="img-fluid">-->
                 </div>
                 <br>
               </div>
@@ -152,7 +157,7 @@
 
           <div class="col-md-8 col-xs-12">
             <form action="#" method="post" class="form">
-              <h2>Identidad-Virtual</h2>
+              <h2>Identidad Virtual</h2>
 
               <br>
 
@@ -174,38 +179,150 @@
                         .form-hide{
                             display:none;
                         } 
+                        
+                        .mercadopago-button {
+                          padding: 0 4.5em;
+                          font-family: "Helvetica Neue", Arial, sans-serif;
+                          font-size: 0.875em;
+                          line-height: 2.7142857142857144;
+                          background: #009ee3;
+                          border-radius: 0.5em;
+                          color: #fff;
+                          cursor: pointer;
+                          border: 0;
+                        }
+                      
                     </style>
 
                     <div class="col-sm-6">
                       <div class="form-hide"  id="wallet_container">
                       <form   action="" method="POST">
-                      <script
-                        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                        data-preference-id="<?php echo $preference->id; ?>">
-                      </script>
+                        <script
+                          src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
+                          data-preference-id="<?php echo $preference->id; ?>">
+                        </script>
                       </form>
                     </div>
-                      <div  id="wallet_container">
-                      <form action="" method="POST">
-        <script
-        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-        data-preference-id="<?php echo $preference->id; ?>">
-        </script>
-    </form>
-    
-    <div style="margin-left:-20px;" class="col-sm-6">
-      <style> .btcpay-form { display: inline-flex; align-items: center; justify-content: center; } .btcpay-form--inline { flex-direction: row; } .btcpay-form--block { flex-direction: column; } .btcpay-form--inline .submit { margin-left: 15px; } .btcpay-form--block select { margin-bottom: 10px; } .btcpay-form .btcpay-custom-container{ text-align: center; }.btcpay-custom { display: flex; align-items: center; justify-content: center; } .btcpay-form .plus-minus { cursor:pointer; font-size:25px; line-height: 25px; background: #DFE0E1; height: 30px; width: 45px; border:none; border-radius: 60px; margin: auto 5px; display: inline-flex; justify-content: center; } .btcpay-form select { -moz-appearance: none; -webkit-appearance: none; appearance: none; color: currentColor; background: transparent; border:1px solid transparent; display: block; padding: 1px; margin-left: auto; margin-right: auto; font-size: 11px; cursor: pointer; } .btcpay-form select:hover { border-color: #ccc; } .btcpay-form option { color: #000; background: rgba(0,0,0,.1); } .btcpay-input-price { -moz-appearance: textfield; border: none; box-shadow: none; text-align: center; font-size: 25px; margin: auto; border-radius: 5px; line-height: 35px; background: #fff; }.btcpay-input-price::-webkit-outer-spin-button, .btcpay-input-price::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } </style>
-<form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
-  <input type="hidden" name="storeId" value="CJgq39kg6FH14gk3UVmxx9Bk5wmjTh8fDDxpXAgzw5J8" />
-  <input type="hidden" name="checkoutDesc" value="Identidad Virtual" />
-  <input type="hidden" name="browserRedirect" value="https://www.maidenware.com.mx" />
-  <input type="hidden" name="price" value="0.0000019" />
-  <input type="hidden" name="currency" value="BTC" />
-  <input type="image" class="submit" name="submit" src="https://maidenware1.s3.us-east-2.amazonaws.com/Bitcoin.png" style="width:209px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
-</form>
-</div>
+                    <div id="wallet_container">
+                      <style>
+                        .btcpay-form {
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                        }
+                        .btcpay-form--inline {
+                          flex-direction: row;
+                        }
+                        .btcpay-form--block {
+                          flex-direction: column;
+                        }
+                        .btcpay-form--inline .submit {
+                          margin-left: 15px;
+                        }
+                        .btcpay-form--block select {
+                          margin-bottom: 10px;
+                        }
+                        .btcpay-form .btcpay-custom-container {
+                          text-align: center;
+                        }
+                        .btcpay-custom {
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        }
+                        .btcpay-form .plus-minus {
+                          cursor: pointer;
+                          font-size: 25px;
+                          line-height: 25px;
+                          background: #DFE0E1;
+                          height: 30px;
+                          width: 45px;
+                          border: none;
+                          border-radius: 60px;
+                          margin: auto 5px;
+                          display: inline-flex;
+                          justify-content: center;
+                        }
+                        .btcpay-form select {
+                          -moz-appearance: none;
+                          -webkit-appearance: none;
+                          appearance: none;
+                          color: currentColor;
+                          background: transparent;
+                          border: 1px solid transparent;
+                          display: block;
+                          padding: 1px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          font-size: 11px;
+                          cursor: pointer;
+                        }
+                        .btcpay-form select:hover {
+                          border-color: #ccc;
+                        }
+                        .btcpay-form option {
+                          color: #000;
+                          background: rgba(0, 0, 0, .1);
+                        }
+                        .btcpay-input-price {
+                          -moz-appearance: textfield;
+                          border: none;
+                          box-shadow: none;
+                          text-align: center;
+                          font-size: 25px;
+                          margin: auto;
+                          border-radius: 5px;
+                          line-height: 35px;
+                          background: #fff;
+                        }
+                        .btcpay-input-price::-webkit-outer-spin-button,
+                        .btcpay-input-price::-webkit-inner-spin-button {
+                          -webkit-appearance: none;
+                          margin: 0;
+                        }
+                      </style>
+                      <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block">
+                        <input type="hidden" name="storeId" value="CJgq39kg6FH14gk3UVmxx9Bk5wmjTh8fDDxpXAgzw5J8" />
+                        <input type="hidden" name="jsonResponse" value="true" />
+                        <input type="hidden" name="checkoutDesc" value="Identidad virtual" />
+                        <input type="hidden" name="price" value="0.0011" />
+                        <input type="hidden" name="currency" value="BTC" />
+                        <input type="image" class="submit" name="submit" src="https://maidenware1.s3.us-east-2.amazonaws.com/Bitcoin.png"
+                        style="width: 168px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
+
+                    </form>
+                    <form action="" method="POST">
+                      <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>"></script>
+                    </form>
                     </div>
+                      <div style="margin-left:-20px;">
+                            <script>
+                                if (!window.btcpay) {
+                                    var script = document.createElement('script');
+                                    script.src = "https://mainnet.demo.btcpayserver.org/modal/btcpay.js";
+                                    document.getElementsByTagName('head')[0].append(script);
+                                }
+                                function handleFormSubmit(event) {
+                                    event.preventDefault();
+                                    var xhttp = new XMLHttpRequest();
+                                    xhttp.onreadystatechange = function() {
+                                        if (this.readyState == 4 && this.status == 200 && this.responseText) {
+                                            window.btcpay.appendInvoiceFrame(JSON.parse(this.responseText).invoiceId);
+                                        }
+                                    };
+                                    xhttp.open('POST', event.target.getAttribute('action'), true);
+                                    xhttp.send(new FormData(event.target));
+                                }
+                                document.querySelectorAll(".btcpay-form").forEach(function(el) {
+                                    if (!el.dataset.initialized) {
+                                        el.addEventListener('submit', handleFormSubmit);
+                                        el.dataset.initialized = true;
+                                    }
+                                });
+                            </script>
                       </div>
+                    </div>
+                  </div>
                       
                     </div>
                   </div>
@@ -263,17 +380,15 @@
 		<div class="row justify-content-between">
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Service</h5>
+					<h5 class="mb-4 text-primary font-secondary">Conoce mas</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Personal loans</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/">Informacion</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Home Equity Loans</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/sustentabilidad/">Sustentabilidad</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Student Loans</a>
+						<li class="mb-2"><a href="https://maidenware.com.mx/identidad-virtual">Identidad Virtual</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Mortgage Loans</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Payday Loans</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/nfcare/">NFCare</a>
 						</li>
 					</ul>
 				</div>
@@ -282,35 +397,26 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">About</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#!">Benefits</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/contacto/">Contacto</a>
 						</li>
-						<li class="mb-2"><a href="#!">Careers</a>
+						<li class="mb-2"><a href="https://www.facebook.com/profile.php?id=100064601179100">Facebook</a>
 						</li>
-						<li class="mb-2"><a href="#!">Our Story</a>
-						</li>
-						<li class="mb-2"><a href="#!">Team</a>
+						<li class="mb-2"><a href="https://www.instagram.com/maidenware/">Instagram</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Help</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="contact.html">Contact Us</a>
-						</li>
-						<li class="mb-2"><a href="faq.html">FAQs</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12 newsletter-form">
 				<div style="background-color: #F4F4F4; padding: 35px;">
 					<h5 class="mb-4 text-primary font-secondary">Newsletter</h5>
 					<div class="pe-0 pe-xl-5">
-						<form action="newsletter.php" method="post" name="mc-embedded-subscribe-form" target="_blank">
+						<form action="#!" method="post" name="mc-embedded-subscribe-form" target="_blank">
 							<div class="input-group mb-3">
-								<input type="text" name="correo" class="form-control shadow-none bg-white border-end-0" placeholder="Email"> <span class="input-group-text border-0 p-0">
+								<input type="text" class="form-control shadow-none bg-white border-end-0" placeholder="Email address"> <span class="input-group-text border-0 p-0">
                     <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
                       aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
                   </span>
@@ -334,7 +440,7 @@
 				<ul class="list-unstyled list-inline mb-0 text-lg-center">
 					<li class="list-inline-item me-4"><a class="text-black" href="https://drive.google.com/file/d/146sIx1Si3z-YF62OkX-Ww-XVmKRynovZ/view?usp=sharing">Politica de Privacidad</a>
 					</li>
-					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
+					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terminos &amp; Condiciones</a>
 					</li>
 				</ul>
 			</div>
