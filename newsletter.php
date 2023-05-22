@@ -1,7 +1,7 @@
 <?php
-if (isset($_POST['subscribe'])) {
+if (isset($_POST['email'])) {
     // Obtener el correo electrónico ingresado en el formulario
-    $correo = $_POST['correo'];
+    $correo = $_POST['email'];
 
     // Validar y procesar el correo electrónico
     if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {

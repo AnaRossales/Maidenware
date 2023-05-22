@@ -254,6 +254,16 @@
               </div>
             </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="https://info.maidenware.com.mx/buy-bitcoin/"><img src="" alt=""></a>
+              <div class="down-content">
+                <a href="https://info.maidenware.com.mx/buy-bitcoin/"><h4>¿Como comprar con Bitcoin?</h4>
+                <h6>Criptograficamente facil...</h6></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -263,17 +273,15 @@
 		<div class="row justify-content-between">
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Service</h5>
+					<h5 class="mb-4 text-primary font-secondary">Conoce mas</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Personal loans</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/">Informacion</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Home Equity Loans</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/sustentabilidad/">Sustentabilidad</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Student Loans</a>
+						<li class="mb-2"><a href="https://maidenware.com.mx/identidad-virtual">Identidad Virtual</a>
 						</li>
-						<li class="mb-2"><a href="service-details.html">Mortgage Loans</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Payday Loans</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/nfcare/">NFCare</a>
 						</li>
 					</ul>
 				</div>
@@ -282,26 +290,17 @@
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">About</h5>
 					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#!">Benefits</a>
+						<li class="mb-2"><a href="https://info.maidenware.com.mx/contacto/">Contacto</a>
 						</li>
-						<li class="mb-2"><a href="#!">Careers</a>
+						<li class="mb-2"><a href="https://www.facebook.com/profile.php?id=100064601179100">Facebook</a>
 						</li>
-						<li class="mb-2"><a href="#!">Our Story</a>
-						</li>
-						<li class="mb-2"><a href="#!">Team</a>
+						<li class="mb-2"><a href="https://www.instagram.com/maidenware/">Instagram</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Help</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="contact.html">Contact Us</a>
-						</li>
-						<li class="mb-2"><a href="faq.html">FAQs</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12 newsletter-form">
@@ -310,7 +309,7 @@
 					<div class="pe-0 pe-xl-5">
 						<form action="newsletter.php" method="post" name="mc-embedded-subscribe-form" target="_blank">
 							<div class="input-group mb-3">
-								<input type="text" name="correo" class="form-control shadow-none bg-white border-end-0" placeholder="Email"> <span class="input-group-text border-0 p-0">
+								<input type="email" name="email" class="form-control shadow-none bg-white border-end-0" placeholder="Email"> <span class="input-group-text border-0 p-0">
                     <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
                       aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
                   </span>
@@ -334,7 +333,7 @@
 				<ul class="list-unstyled list-inline mb-0 text-lg-center">
 					<li class="list-inline-item me-4"><a class="text-black" href="https://drive.google.com/file/d/146sIx1Si3z-YF62OkX-Ww-XVmKRynovZ/view?usp=sharing">Politica de Privacidad</a>
 					</li>
-					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
+					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terminos &amp; Condiciones</a>
 					</li>
 				</ul>
 			</div>
