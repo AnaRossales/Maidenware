@@ -14,7 +14,7 @@
     $item->unit_price = 30;
     $preference->items = array($item);
     $preference->Back_urls = array(
-      "success" => "https://www.maidenware.com.mx/sign-up",
+      "success" => "https://www.maidenware.com.mx/Identidad-Virtual/sign-up.html",
       "failure" => "http://www.maidenware.com.mx",
       "pending" => "http://www.tu-sitio/pending"
   );
