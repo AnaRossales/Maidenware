@@ -8,6 +8,8 @@
     <link href="css/EstiloFormulario2.css" rel="stylesheet" type="text/css"  />
     <link href="css/Estilos.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://maidenware1.s3.us-east-2.amazonaws.com/favicon.png" type="image/x-icon">
+
 </head>
 <body>
     <script>
@@ -62,7 +64,27 @@ function validarEspacios(event) {
 
 }
         
-</script>    
+</script>   
+<style>
+    .btn {
+      background-color: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+  
+    .btn:hover {
+      background-color: #ff6666;
+    }
+  </style> 
     <form class="jotform-form" action="queplantillaseleccione.php" method="post" onsubmit="validarEspacios(event)">
         <div role="main" class="form-all">
             <div style="text-align: center;">
@@ -238,7 +260,7 @@ function validarEspacios(event) {
                     <br><br>
                     <div style="display: flex; justify-content: center;">
                     <div class="wrap"><br>
-                    <input type="submit" class="btn-outline-primary" value="Probar">
+                    <input type="submit" class="btn" value="Probar">
 
                     <!--Aqui falta -->
 

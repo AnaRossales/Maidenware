@@ -7,8 +7,30 @@
     <link href="css/Estiloformulario1.css" rel="stylesheet" type="text/css" />
     <link href="css/EstiloFormulario2.css" rel="stylesheet" type="text/css"  />
     <link href="css/Estilos.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://maidenware1.s3.us-east-2.amazonaws.com/favicon.png" type="image/x-icon">
+
     <!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
 </head>
+<style>
+    .btn {
+      background-color: #ff4d4d;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+  
+    .btn:hover {
+      background-color: #ff6666;
+    }
+  </style>
 <script>        //Esta funcion sirve para comprobar que lo que el usuario inserto en los espacios de Facebook y Discord realmente sean links 
 //Aqui lo que hace, es que valida todo el formulario y le mete tantito rollo para que el usuario no pueda hacer inyecciones de sql o cosas por el estilo o el mismo HTML
        
@@ -83,7 +105,7 @@ function mostrarContrasena() {
                     <br>
                     <div style="display: flex; justify-content: center;">
                     <div class="wrap">
-                    <input type="submit" class="btn-outline-primary" value="Iniciar Sesión" id="enviar"></div></div></li></div></li>
+                    <input type="submit" class="btn" value="Iniciar Sesión" id="enviar"></div></div></li></div></li>
                     </ul></div>
                     <!--Aqui falta -->
 

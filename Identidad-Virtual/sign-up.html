@@ -7,8 +7,30 @@
     <link href="css/Estiloformulario1.css" rel="stylesheet" type="text/css" />
     <link href="css/EstiloFormulario2.css" rel="stylesheet" type="text/css"  />
     <link href="css/Estilos.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://maidenware1.s3.us-east-2.amazonaws.com/favicon.png" type="image/x-icon">
+
     <!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
 </head>
+<style>
+  .btn {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #ff6666;
+  }
+</style>
 <script>
     window.onload = function() {
         alert('¡Bienvenido/a! Gracias por elegir nuestro servicio. \n Para poder aprovechar todas las funcionalidades de nuestra plataforma, te recomendamos crear una cuenta. ¡Es fácil y rápido! \nSolo tienes que llenar los datos y hacer clic en el botón "Registrarse" y seguir los pasos indicados. \n Una vez registrado/a, podrás disfrutar de todos los beneficios exclusivos que tenemos para ti. \n¡No esperes más y se parte de nuestra comunidad! \n- Equipo de Maidenware\n**Al Registrarse esta de acuerdo con nuestros terminos y condiciones');
@@ -183,7 +205,7 @@ function mostrarContrasena() {
                     <div style="display: flex; justify-content: center;">
                     <div class="wrap"><br>
                         <input type="reset" value="Limpiar datos">
-                    <input type="submit" class="btn-outline-primary" value="Registrarse" id="enviar">
+                    <input type="submit" class="btn" value="Registrarse" id="enviar">
                     
                     <!--Aqui falta -->
 
