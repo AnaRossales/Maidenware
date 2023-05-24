@@ -20,5 +20,5 @@ deployment:
     - /bin/rsync special-offer.html $DEPLOYPATH
     - /bin/rsync terms.html $DEPLOYPATH
     - /bin/rsync testimonials.html $DEPLOYPATH
-    - /bin/rsync product-details.php $DEPLOYPATH
-    - /bin/rsync product-detail-prueba.php $DEPLOYPATH
+    - /bin/rsync identidad-virtual.php $DEPLOYPATH
+    - /bin/rsync newsletter.php $DEPLOYPATH
