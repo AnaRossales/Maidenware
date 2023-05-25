@@ -9,6 +9,9 @@ deployment:
     - /bin/rsync -R js $DEPLOYPATH
     - /bin/rsync -R PruebaNoUsuarios $DEPLOYPATH
     - /bin/rsync -R Identidad-Virtual $DEPLOYPATH
+    - /bin/rsync -R AlanObregon $DEPLOYPATH
+    - /bin/rsync -R AlexisChavez $DEPLOYPATH
+    - /bin/rsync -R AnaRoss $DEPLOYPATH
     - /bin/rsync -R NFCare $DEPLOYPATH
     - /bin/rsync about-us.html $DEPLOYPATH
     - /bin/rsync blog-details.html $DEPLOYPATH
